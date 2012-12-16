@@ -1,0 +1,45 @@
+{
+  "title": "PayPal",
+  "description": "Documentation on PayPal payment modules for osCommerce Online Merchant.",
+  "copyright": "Copyright (c) 2008-2012 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
+  "authors": [
+    {
+      "name": "Harald Ponce de Leon"
+    },
+    {
+      "name": "John Fitchett"
+    }
+  ],
+  "chapters": {
+    "oscom23": {
+      "title": "osCommerce Online Merchant v2.3",
+      "pages": {
+        "express_checkout": {
+          "title": "PayPal Express Checkout",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "payments_standard": {
+          "title": "PayPal Payments Standard",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "payments_pro_direct": {
+          "title": "PayPal Payments Pro Direct Payments",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "payments_pro_direct_uk": {
+          "title": "PayPal Payments Pro (UK) Direct Payments",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "payments_pro_express_uk": {
+          "title": "PayPal Payments Pro (UK) Express Checkout",
+          "package_id" :"",
+          "support_url": ""
+        }
+      }
+    }
+  }
+}

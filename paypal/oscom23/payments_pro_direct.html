@@ -1,0 +1,115 @@
+<h1>PayPal Payments Pro Direct Payments<br /><small>for osCommerce Online Merchant v2.3</small></h1>
+
+<p>PayPal Payments Pro Direct Payments allows credit cards to be accepted directly on a merchant's website during the checkout process.</p>
+
+<p>PayPal Payments Pro Direct Payments is included in osCommerce Online Merchant v2.3 and is available as a separate add-on for existing store owners who are running earlier versions.</p>
+
+<p>The PayPal Payments Pro Direct Payments payment module supports the following PayPal features:</p>
+
+<ul>
+  <li>Sandbox server to perform test transactions</li>
+  <li>Authorization and Sale transaction methods</li>
+  <li>Process credit and debit cards directly during the checkout procedure</li>
+</ul>
+
+<div class="alert">PayPal requires the PayPal Express Checkout payment module to be enabled if this module is activated and therefore should not be used as a stand alone product.</div>
+
+<div class="alert">This payment module requires PHP to support cURL or access to the "curl" program file.</div>
+
+<h2>Configuration Settings</h2>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Enable PayPal Direct</td>
+      <td>Setting this parameter to <em>True</em> makes the payment method available to customers during the checkout procedure. The credit or debit card information is entered on the checkout confirmation page.</td>
+    </tr>
+    <tr>
+      <td>API Username</td>
+      <td>The username to use for the PayPal API service. This is tied to your PayPal seller e-mail address profile to accept payments for.</td>
+    </tr>
+    <tr>
+      <td>API Password</td>
+      <td>The password to use for the PayPal API service.</td>
+    </tr>
+    <tr>
+      <td>API Signature</td>
+      <td>The signature to use for the PayPal API service.</td>
+    </tr>
+    <tr>
+      <td>Transaction Server</td>
+      <td>
+        The transaction server to use for payment transactions.<br /><br />
+        The <em>Live</em> server is for production use to receive payments from customers, and the <em>Sandbox</em> server is used to test transactions only.
+      </td>
+    </tr>
+    <tr>
+      <td>Transaction Method</td>
+      <td>
+        The transaction method to use for payment transactions.<br /><br />
+        The <em>Authorization</em> method only authorizes the transaction which can be captured up to 29 days later, and must be captured through your PayPal account page.<br /><br />
+        The <em>Sale</em> method instantly transfers the funds to your PayPal account.
+      </td>
+    </tr>
+    <tr>
+      <td>Card Acceptance Page</td>
+      <td>
+        The page during the checkout procedure that collects the card details. The card details can either be collected on the checkout payment page or the checkout confirmation page.<br /><br />
+        <div class="alert">Stores running osCommerce v2.2 Milestone 2 must use the Checkout Payment page to collect the card details on for transactions to be processed correctly.</div>
+      </td>
+    </tr>
+    <tr>
+      <td>Payment Zone</td>
+      <td>If set, this payment method will only be available to orders made within the defined zone.</td>
+    </tr>
+    <tr>
+      <td>Set Order Status</td>
+      <td>The orders status will be updated to this value when the transaction has been performed.</td>
+    </tr>
+    <tr>
+      <td>Sort Order</td>
+      <td>The position to show the payment method on the checkout payment page against other available payment methods.</td>
+    </tr>
+    <tr>
+      <td>cURL Program Location</td>
+      <td>The location and filename of the cURL "curl" program file.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Manual Installation (as an Add-On)</h2>
+
+<p>After extracting the add-on package, copy the files located in the <em>catalog</em> directory to your osCommerce installation directory on the server. The files must be copied in the correct directory structure as extracted from the add-on package.</p>
+
+<p>The file listing is as follows:</p>
+
+<ul>
+  <li>includes/languages/english/modules/payment/paypal_direct.php</li>
+  <li>includes/languages/espanol/modules/payment/paypal_direct.php</li>
+  <li>includes/languages/german/modules/payment/paypal_direct.php</li>
+  <li>includes/modules/payment/paypal_direct.php</li>
+</ul>
+
+<p>The standard languages definitions in English, Spanish, and German are provided in the add-on package. For additional languages, copy one of the existing language definition files to the appropriate language directory and edit the file with a text editor to edit the language definitions. The location of the language definition file must be in:</p>
+
+<ul>
+  <li>includes/languages/<em>language</em>/modules/payment/paypal_direct.php</li>
+</ul>
+
+<p>When the files have been copied to their appropriate locations, the payment module will be available in the Administration Tool -> Modules -> Payment Modules listing where it can be installed.</p>
+
+<h2>Changelog</h2>
+
+<dl class="bulleted">
+  <dt>v1.1 22-Jan-2008</dt>
+  <dd>Add configuration parameter to control where the card details should be collected; either on the checkout payment or checkout confirmation page. This is needed for 2.2MS2 compatibility which can only collect card details on the checkout payment page.</dd>
+
+  <dt>v1.0 11-Jan-2008</dt>
+  <dd>Initial Release</dd>
+</dl>

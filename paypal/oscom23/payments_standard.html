@@ -1,0 +1,131 @@
+<h1>PayPal Payments Standard<br /><small>for osCommerce Online Merchant v2.3</small></h1>
+
+<p>PayPal Payments Standard is a secure quick-start solution that has everything store owners need to start accepting credit cards, bank transfers, and PayPal payments online.</p>
+
+<p>PayPal Payments Standard is included in osCommerce Online Merchant v2.3 and is available as a separate add-on for existing store owners who are running earlier versions.</p>
+
+<p>The PayPal Payments Standard payment module supports the following PayPal features:</p>
+
+<ul>
+  <li>Sandbox server to perform test transactions</li>
+  <li>Authorization and Sale transaction methods</li>
+  <li>Encrypted Web Payments</li>
+  <li>Instant Payment Notification</li>
+</ul>
+
+<h2>Configuration Settings</h2>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Enable PayPal Payments Standard</td>
+      <td>Setting this parameter to <em>True</em> makes the payment method available to customers during the checkout procedure.</td>
+    </tr>
+    <tr>
+      <td>E-Mail Address</td>
+      <td>The PayPal seller e-mail address to accept payments for.</td>
+    </tr>
+    <tr>
+      <td>Payment Zone</td>
+      <td>If set, this payment method will only be available to orders made within the defined zone.</td>
+    </tr>
+    <tr>
+      <td>Set Preparing Order Status</td>
+      <td>
+        The customers order is saved in the database on the checkout confirmation page before the customer is forwarded to PayPal to finalize the payment transaction. The order is saved in the database with this defined order status; by default it is <em>Preparing PayPal IPN</em>.<br /><br />
+        The order status is updated again when the customer finalizes the payment transaction at PayPal and returns to the store with the link provided by PayPal. The order status is also updated when the Instant Payment Notification from PayPal is received.<br /><br />
+        If the customer does not finalize the payment transaction at PayPal, the order remains in the database with this order status and can be removed after a period of time.
+      </td>
+    </tr>
+    <tr>
+      <td>Set PayPal Acknowledged Order Status</td>
+      <td>The orders status will be updated to this value when the Instant Payment Notification from PayPal is received and the order has been verified.</td>
+    </tr>
+    <tr>
+      <td>Transaction Server</td>
+      <td>
+        The transaction server to use for payment transactions.<br /><br />
+        The <em>Live</em> server is for production use to receive payments from customers, and the <em>Sandbox</em> server is used to test transactions only.
+      </td>
+    </tr>
+    <tr>
+      <td>Transaction Method</td>
+      <td>
+        The transaction method to use for payment transactions.<br /><br />
+        The <em>Authorization</em> method only authorizes the transaction which can be captured up to 29 days later, and must be captured through your PayPal account page.<br /><br />
+        The <em>Sale</em> method instantly transfers the funds to your PayPal account.
+      </td>
+    </tr>
+    <tr>
+      <td>Page Style</td>
+      <td>The name of the Page Style to use as defined on your PayPal Profile account page.</td>
+    </tr>
+    <tr>
+      <td>Debug E-Mail Address</td>
+      <td>All transaction parameters for an Invalid order can be sent to a defined e-mail address for further investigation.</td>
+    </tr>
+    <tr>
+      <td>Sort Order</td>
+      <td>The position to show the payment method on the checkout payment page against other available payment methods.</td>
+    </tr>
+    <tr>
+      <td>Enable Encrypted Web Payments</td>
+      <td>
+        Setting this parameter to True encrypts the parameters sent to PayPal during the payment transaction.<br /><br />
+        <div class="alert">This feature requires OpenSSL to be supported by your PHP installation, or access to the "openssl" program file and to PHPs exec() function.</div>
+      </td>
+    </tr>
+    <tr>
+      <td>Your Private Key</td>
+      <td>The location and filename of your private key to use for signing the payment transaction.</td>
+    </tr>
+    <tr>
+      <td>Your Public Certificate </td>
+      <td>The location and filename of your public certificate to use for signing the payment transaction.</td>
+    </tr>
+    <tr>
+      <td>PayPals Public Certificate</td>
+      <td>The location and filename of the PayPal public key to use for encrypting the payment transaction.</td>
+    </tr>
+    <tr>
+      <td>Your PayPal Public Certificate ID </td>
+      <td>The public certificate ID that PayPal should use to decrypt the payment transaction. This is defined at your PayPal Encrypted Payment Settings Profile page.</td>
+    </tr>
+    <tr>
+      <td>Working Directory</td>
+      <td>The working directory to create temporary files. All files created are automatically deleted when they are no longer needed.</td>
+    </tr>
+    <tr>
+      <td>OpenSSL Location</td>
+      <td>The location and filename of the OpenSSL "openssl" program file.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Manual Installation (as an Add-On)</h2>
+
+<p>After extracting the add-on package, copy the files located in the <em>catalog</em> directory to your osCommerce installation directory on the server. The files must be copied in the correct directory structure as extracted from the add-on package.</p>
+
+<p>The file listing is as follows:</p>
+
+<ul>
+  <li>ext/modules/payment/paypal/standard_ipn.php</li>
+  <li>includes/languages/english/modules/payment/paypal_standard.php</li>
+  <li>includes/languages/espanol/modules/payment/paypal_standard.php</li>
+  <li>includes/languages/german/modules/payment/paypal_standard.php</li>
+  <li>includes/modules/payment/paypal_standard.php</li>
+</ul>
+
+<p>The standard languages definitions in English, Spanish, and German are provided in the add-on package. For additional languages, copy one of the existing language definition files to the appropriate language directory and edit the file with a text editor to edit the language definitions. The location of the language definition file must be in:</p>
+
+<ul>
+  <li>includes/languages/<em>language</em>/modules/payment/paypal_standard.php</li>
+</ul>
+
+<p>When the files have been copied to their appropriate locations, the payment module will be available in the Administration Tool -> Modules -> Payment Modules listing where it can be installed.</p>
