@@ -17,11 +17,11 @@
 
 <h4>Customer Accounts</h4>
 
-<p>PayPal Express Checkout allows purchases to be made without the customer needing to create or log into their local store account. A local customer account is however created when they return back to the store from the Express Checkout flow to keep track of the order.</p>
+<p>PayPal Express Checkout allows guest purchases to be made without the customer needing to create or log into their local store account. A local customer account is however created when they return back to the store from the Express Checkout flow to keep track of the order.</p>
 
-<p>In v1.0 of the PayPal Express Checkout payment module, if no matching local account was found based on the e-mail address provided during the Express Checkout flow, a local account was automatically created and a randomly generated password was e-mailed to the customer.</p>
+<p>If the Set Password account content module is not installed, the automatically created account is assigned a randomly generated password which is e-mailed to the customers e-mail address PayPal provides.</p>
 
-<p>From v2.0, if the Set Password account content module is enabled, the customer is assigned an empty password and has the opportunity to set a password in their My Account page during their session. No e-mail is sent out and the customer is only able to log in again through Log In with PayPal or PayPal Express Checkout when their next order is made until they set a password in their My Account page.</p>
+<p>If the Set Password account content module is installed, the password is left empty and no e-mail is sent to the customer. The customer then has the opportunity to set their own password in the My Account page during their session or they will only able to log in again through Log In with PayPal or PayPal Express Checkout when their next order is made.</p>
 
 <h4>Order Processing</h4>
 
