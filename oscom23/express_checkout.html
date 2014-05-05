@@ -231,3 +231,35 @@
 <p>When the files have been copied to their appropriate locations, the payment module will be available on the Administration Tool -> Modules -> Payment Modules -> Install Module page where it can be installed, or on the Administration Tool -> Modules -> Payment Modules page if the module was already previously installed.</p>
 
 <p>If the module was already previously installed, it is important to visit the module configuration page to make sure new parameters are automatically installed in the database.</p>
+
+<h2>Changelog</h2>
+
+<dl class="bulleted">
+  <dt>v2.0 xx-May-2014</dt>
+  <dd>Use API 112.</dd>
+  <dd>If the Set Password account content module is installed, leave the password of the automatically created customer account for guests empty and don't e-mail the customer (requires osCommerce Online Merchant v2.3.4).</dd>
+  <dd>Show PayPal logo on the checkout confirmation page as the payment method instead of the module public title.</dd>
+  <dd>Allow a PayPal defined Page Style to be used.</dd>
+  <dd>Only add line items if line item total calculations matches order total calculations.</dd>
+  <dd>Additionally verify the PayPal transaction before the order is processed.</dd>
+  <dd>Allow Instant Update to prevent the customer from proceeding through Express Checkout if no shipping rates are available for the shipping destination (requires osCommerce Online Merchant v2.3.4).</dd>
+  <dd>Support error code 10486 for when insufficient funds are available in the customers PayPal account.</dd>
+
+  <dt>osCommerce Online Merchant v2.3.3.1 27-08-2013</dt>
+  <dd>Use API 104.</dd>
+  <dd>Label public title with sandbox tag when in sandbox testing mode.</dd>
+  <dd>Add Test Connection link in module configuration page.</dd>
+  <dd>Verify SSL connections with PayPal public key certificate.</dd>
+
+  <dt>osCommerce Online Merchant v2.3.0 08-11-2010</dt>
+  <dd>Use API 60.</dd>
+  <dd>Allow debug transaction information to be sent in an e-mail for failed transactions.</dd>
+  <dd>Pre-Configure the module for new installations with the store configured store owner e-mail address.</dd>
+  <dd>Add support for PayPal Account Optional.</dd>
+  <dd>Introduce Instant Update to have PayPal retrieve shipping rates and taxes based on the shipping destination.</dd>
+  <dd>Include PayPal transaction information in a private order status level.</dd>
+  <dd>Automatically create customer accounts for guests when returning back to the store from the Express Checkout flow. Accounts are created with an automatically generated random password that is e-mailed to the customer.</dd>
+
+  <dt>v1.0 11-Jan-2008</dt>
+  <dd>Initial Release</dd>
+</dl>
