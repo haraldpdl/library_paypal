@@ -57,7 +57,7 @@
 
 <p>As of osCommerce Online Merchant v2.3.4, orders can be blocked when no shipping rate for the destination is available. If this is enabled and Instant Update detects that no shipping rates are available, it requests the customer to select or enter a new shipping address during the Express Checkout flow and prevents them to continue with the order until a valid shipping destination has been selected.</p>
 
-<h4>Requirements</h4>
+<h4 class="notoc">Requirements</h4>
 
 <p>Instant Update requires the following for the shipping rates to be retrieved:</p>
 
@@ -235,7 +235,7 @@
 <h2>Changelog</h2>
 
 <dl class="bulleted">
-  <dt>v2.0 xx-May-2014</dt>
+  <dt>v3.0 xx-May-2014</dt>
   <dd>Use API 112.</dd>
   <dd>If the Set Password account content module is installed, leave the password of the automatically created customer account for guests empty and don't e-mail the customer (requires osCommerce Online Merchant v2.3.4).</dd>
   <dd>Show PayPal logo on the checkout confirmation page as the payment method instead of the module public title.</dd>
@@ -247,16 +247,19 @@
   <dd>Support Log In with PayPal Seamless Checkout.</dd>
   <dd>Support error code 10486 for when insufficient funds are available in the customers PayPal account.</dd>
 
-  <dt>osCommerce Online Merchant v2.3.3.1 27-Aug-2013</dt>
+  <dt>v2.0 08-Oct-2013</dt>
   <dd>Use API 104.</dd>
   <dd>Label public title with sandbox tag when in sandbox testing mode.</dd>
   <dd>Add Test Connection link in module configuration page.</dd>
   <dd>Verify SSL connections with PayPal public key certificate.</dd>
 
-  <dt>osCommerce Online Merchant v2.3.0 08-Nov-2010</dt>
+  <dt>v1.2 19-Aug-2013</dt>
   <dd>Use API 60.</dd>
   <dd>Allow debug transaction information to be sent in an e-mail for failed transactions.</dd>
   <dd>Pre-Configure the module for new installations with the store configured store owner e-mail address.</dd>
+
+  <dt>v1.1 18-Feb-2010</dt>
+  <dd>Use API 57.</dd>
   <dd>Add support for PayPal Account Optional.</dd>
   <dd>Introduce Instant Update to have PayPal retrieve shipping rates and taxes based on the shipping destination.</dd>
   <dd>Include PayPal transaction information in a private order status level.</dd>
