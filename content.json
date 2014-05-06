@@ -1,6 +1,7 @@
 {
   "title": "PayPal",
-  "description": "Documentation on PayPal payment modules for osCommerce Online Merchant.",
+  "image": "logo.png",
+  "description": "PayPal modules for osCommerce Online Merchant.",
   "copyright": "Copyright (c) 2008-2014 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
   "authors": [
     {
