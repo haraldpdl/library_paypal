@@ -1,4 +1,4 @@
-<h1>PayPal Express Checkout<br /><small>v3.0 for osCommerce Online Merchant v2.3</small></h1>
+<h1>PayPal Express Checkout <small>v3.0<br />for osCommerce Online Merchant v2.3</small></h1>
 
 <p>PayPal Express Checkout is bundled with osCommerce Online Merchant and is also available as a separate Add-On package existing store owners can use to upgrade to.</p>
 
@@ -14,32 +14,6 @@
   <li>SSL Certificate verified transactions</li>
   <li>Sandbox server to perform test transactions</li>
 </ul>
-
-<h3>Customer Accounts</h3>
-
-<p>PayPal Express Checkout allows guest purchases to be made without the customer needing to create or log into their local store account. A local customer account is however created when they return back to the store from the Express Checkout flow to keep track of the order.</p>
-
-<p>If the Set Password account content module is not installed, the automatically created account is assigned a randomly generated password which is e-mailed to the customers e-mail address PayPal provides.</p>
-
-<p>If the Set Password account content module is installed, the password is left empty and no e-mail is sent to the customer. The customer then has the opportunity to set their own password in the My Account page during their session or they will only able to log in again through Log In with PayPal or PayPal Express Checkout when their next order is made.</p>
-
-<h3>Order Processing</h3>
-
-<p>The PayPal Express Checkout payment module has been developed to finalize the order transaction during the Express Checkout flow. The order is confirmed during the Express Checkout flow when the customer uses the "Pay Now" button to finalize the order. On returning back to the store, a check on the transaction total is performed - if it matches the order total the customer is directed to the checkout success page otherwise, on rare occassions, they are directed to the checkout confirmation page where they must confirm their order again.</p>
-
-<p>The PayPal transaction total may differ from the order total in the following scenarios:</p>
-
-<ul>
-  <li>when Instant Update is not enabled and the customer chooses another shipping address which shipping rates and taxes may be applied to or removed from the order</li>
-  <li>when third-party Order Total modules are installed that manipulate taxes applied to the order</li>
-  <li>when digital downloads are purchased and the customer chooses another billing address which taxes may be applied to or removed from the order</li>
-</ul>
-
-<p>In the rare occassion where the PayPal transaction total does not match the order total, the customer has the opportunity to review their order and order total calculations (including taxes) before confirming and processing the order on the checkout confirmation page.</p>
-
-<h3>Line Items</h3>
-
-<p>Each product that is ordered is passed on to PayPal as line items to show to the customer during the Express Checkout flow. This includes extra third-party Order Total modules that manipulate the order total values (eg, discounts). In rare occassions, when the line items, shipping, and tax calculations do not match the order total value, only the order total value is passed onto PayPal without the line items.</p>
 
 <h2>Features</h2>
 
@@ -193,6 +167,34 @@
     </tr>
   </tbody>
 </table>
+
+<h2>Notes</h2>
+
+<h3>Customer Accounts</h3>
+
+<p>PayPal Express Checkout allows guest purchases to be made without the customer needing to create or log into their local store account. A local customer account is however created when they return back to the store from the Express Checkout flow to keep track of the order.</p>
+
+<p>If the Set Password account content module is not installed, the automatically created account is assigned a randomly generated password which is e-mailed to the customers e-mail address PayPal provides.</p>
+
+<p>If the Set Password account content module is installed, the password is left empty and no e-mail is sent to the customer. The customer then has the opportunity to set their own password in the My Account page during their session or they will only able to log in again through Log In with PayPal or PayPal Express Checkout when their next order is made.</p>
+
+<h3>Order Processing</h3>
+
+<p>The PayPal Express Checkout payment module has been developed to finalize the order transaction during the Express Checkout flow. The order is confirmed during the Express Checkout flow when the customer uses the "Pay Now" button to finalize the order. On returning back to the store, a check on the transaction total is performed - if it matches the order total the customer is directed to the checkout success page otherwise, on rare occassions, they are directed to the checkout confirmation page where they must confirm their order again.</p>
+
+<p>The PayPal transaction total may differ from the order total in the following scenarios:</p>
+
+<ul>
+  <li>when Instant Update is not enabled and the customer chooses another shipping address which shipping rates and taxes may be applied to or removed from the order</li>
+  <li>when third-party Order Total modules are installed that manipulate taxes applied to the order</li>
+  <li>when digital downloads are purchased and the customer chooses another billing address which taxes may be applied to or removed from the order</li>
+</ul>
+
+<p>In the rare occassion where the PayPal transaction total does not match the order total, the customer has the opportunity to review their order and order total calculations (including taxes) before confirming and processing the order on the checkout confirmation page.</p>
+
+<h3>Line Items</h3>
+
+<p>Each product that is ordered is passed on to PayPal as line items to show to the customer during the Express Checkout flow. This includes extra third-party Order Total modules that manipulate the order total values (eg, discounts). In rare occassions, when the line items, shipping, and tax calculations do not match the order total value, only the order total value is passed onto PayPal without the line items.</p>
 
 <h2>Add-On Package</h2>
 
