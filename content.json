@@ -39,6 +39,11 @@
           "title": "PayPal Payments Pro (UK) Express Checkout",
           "package_id" :"",
           "support_url": ""
+        },
+        "log_in": {
+          "title": "Log In with PayPal",
+          "package_id" :"",
+          "support_url": ""
         }
       }
     }

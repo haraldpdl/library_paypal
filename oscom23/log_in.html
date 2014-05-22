@@ -1,0 +1,209 @@
+<h1>Log In with PayPal <small>v1.0<br />for osCommerce Online Merchant v2.3</small></h1>
+
+<p>Log In with PayPal allows guests to authenticate themselves through PayPal and to securely share their personal and shipping address information without the need to create a customer account on your store. The shared information is used to calculate taxes and to retrieve a list of available shipping rates for their order based on their shipping address.</p>
+
+<p>When guests authenticate themselves through PayPal, their default payment method is automatically set to PayPal Express Checkout which they can use without needing to sign into again.</p>
+
+<p>Log In with PayPal is bundled with osCommerce Online Merchant (since v2.3.4) and is also available as a separate Add-On package existing store owners can use to upgrade to.</p>
+
+{image}log_in-minibrowser.jpg|Log In with PayPal Mini-Browser Window{image}
+
+<p>The Log In with PayPal content module supports the following features:</p>
+
+<ul>
+  <li>Seamless Checkout: Customers who Log In with PayPal do not need to log in again for Express Checkout</li>
+  <li>SSL Certificate verified API calls</li>
+  <li>Sandbox server to perform test logins</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<p>Log In with PayPal requires the following:</p>
+
+<ul>
+  <li>PayPal Application; a PayPal Application needs to be created at the <a href="https://developer.paypal.com" target="_blank">PayPal Developer</a> site. The API credentials assigned to the application need to be entered in the module configuration page.</li>
+  <li>Content Modules; as Log In with PayPal is a content module, it requires the Content Modules implementation introduced in osCommerce Online Merchant v2.3.4. Please refer to its <a href="{link}Online|Library|en&oscom_2_3&release_notes&v2_3_4{link}">release notes</a> to add the implementation into your existing store.</li>
+  <li>Set Password Content Module; it is important to enable the Set Password content module to automatically replace the My Account -> Change Password link to a Set Password link.</li>
+</ul>
+
+<h2>Features</h2>
+
+<h3>Seamless Checkout</h3>
+
+<p>Seamless Checkout requires the separate <a href="{link}Package|Library|en&paypal&oscom23&express_checkout{link}">PayPal Express Checkout</a> payment module and allows customers who have logged in through PayPal to proceed straight to the Express Checkout flow without needing to log in again.</p>
+
+<p>The PayPal Express Checkout payment module is bundled with osCommerce Online Merchant and is also available as a separate Add-On package at:</p>
+
+<p><a href="http://addons.oscommerce.com/info/5658" target="_blank">http://addons.oscommerce.com/info/5658</a></p>
+
+<h3>SSL Certificate Verified API Calls</h3>
+
+<p>All API calls sent to PayPal are performed by verifying PayPal's SSL certificates to guarantee the identity of PayPal. This is performed by using the following public keys in order if they are available:</p>
+
+<ul>
+  <li>ext/modules/payment/paypal/paypal.com.crt</li>
+  <li>includes/cacert.pem (public key bundle)</li>
+  <li>the web server configured public key bundle</li>
+</ul>
+
+<p>A test connection link is available on the content module configuration page which can be used to test if API calls to PayPal can be verified from your web server. If the test connection fails, please contact your hosting provider as they may need to update your web server configuration. The SSL certificate verification can also be disabled on the content module configuration page however it is highly discouraged to disable.</p>
+
+<div class="alert">Some web hosting providers require a curl proxy to be used which can be configured on the content module configuration page.</div>
+
+<h2>Configuration Settings</h2>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Enable Log In with PayPal</td>
+      <td>Setting this parameter to <em>True</em> adds the content module to the login page.</td>
+      <td><em>True</em></td>
+    </tr>
+    <tr>
+      <td>Client ID</td>
+      <td>The Client ID of the PayPal Application to use.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Secret</td>
+      <td>The Secret of the PayPal Application to use.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Theme</td>
+      <td>A Blue and Neutral theme is available for the design of the Log In with PayPal button.</td>
+      <td><em>Blue</em></td>
+    </tr>
+    <tr>
+      <td>Information Requested From Customers</td>
+      <td>The attributes the customer shares. All attributes are selected by default. The minimum attributes required are defined by a radio button which cannot be deselected.<br /><br /><div class="note">The selected attributes must match the attributes selected in the PayPal Application settings.</div></div></td>
+      <td>
+        <dl>
+          <dt><em>Personal Information</em></dt>
+          <dd><em>Full Name</em></dd>
+          <dd><em>Date of Birth</em></dd>
+          <dd><em>Age Range</em></dd>
+          <dd><em>Gender</em></dd>
+
+          <dt><em>Address Information</em></dt>
+          <dd><em>Email Address</em></dd>
+          <dd><em>Street Address</em></dd>
+          <dd><em>City</em></dd>
+          <dd><em>State</em></dd>
+          <dd><em>Country</em></dd>
+          <dd><em>Zip Code</em></dd>
+          <dd><em>Phone</em></dd>
+
+          <dt><em>Account Information</em></dt>
+          <dd><em>Account Status (verified)</em></dd>
+          <dd><em>Account Type</em></dd>
+          <dd><em>Account Creation Date</em></dd>
+          <dd><em>Time Zone</em></dd>
+          <dd><em>Locale</em></dd>
+          <dd><em>Language</em></dd>
+
+          <dt><em>Checkout Express</em></dt>
+          <dd><em>Seamless Checkout</em></dd>
+        </dl>
+      </td>
+    </tr>
+    <tr>
+      <td>Server Type</td>
+      <td>
+        The server to use for API calls.<br /><br />
+        The <em>Live</em> server is for production use to use with real PayPal accounts, and the <em>Sandbox</em> server is used to test with PayPal Sandbox account logins.
+      </td>
+      <td><em>Live</em></td>
+    </tr>
+    <tr>
+      <td>Verify SSL Certificate</td>
+      <td>Verify PayPal's identity when API calls are sent.</td>
+      <td><em>True</em></td>
+    </tr>
+    <tr>
+      <td>Proxy Server</td>
+      <td>Send API calls through this proxy server.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Content Width</td>
+      <td>
+        The width of the login page to utilize to show the Log In with PayPal content.<br /><br />
+        <em>Full</em> utilizes the full width of the page, and <em>Half</em> only half the width of the page.
+      </td>
+      <td><em>Full</em></td>
+    </tr>
+    <tr>
+      <td>Sort Order</td>
+      <td>The position to show the content of Log In with PayPal against other available content modules.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Notes</h2>
+
+<h3>Customer Accounts</h3>
+
+<p>Log In with PayPal allows guest purchases to be made without the customer needing to create or log into their local store account. As a customer account is needed to track orders, when the customer returns back to the store after logging in through PayPal, either:</p>
+
+<ul>
+  <li>they are automatically logged into their store account matching the same e-mail address, or</li>
+  <li>a store account based on their PayPal e-mail address is automatically created with an empty password</li>
+</ul>
+
+<p>Customers cannot log into automatically created store accounts until they set a password on the My Account -> Set Password page, and can continue to log in through PayPal until a password has been set.</p>
+
+<div class="note">Please note that the sharing of customer email addresses does not authorize your business to email consumers. For any communications not related to a purchase (such as marketing emails, newsletters, and offers), you must continue to present your customers with separate opt-in/out options.</div>
+
+<h2>Add-On Package</h2>
+
+<p>The separate Log In with PayPal Add-On package is available at:</p>
+
+<p><a href="http://addons.oscommerce.com/info/9067" target="_blank">http://addons.oscommerce.com/info/9067</a></p>
+
+<h2>Online Demonstration</h2>
+
+<p>An online demonstration is available at:</p>
+
+<p><a href="http://demo.oscommerce.com" target="_blank">http://demo.oscommerce.com</a></p>
+
+<p><i>For the online demonstration, Log In with PayPal has been configured with PayPal's Sandbox environment and requires a sandbox account to log into.</i></p>
+
+<h2>Manual Installation (as an Add-On)</h2>
+
+<p>After extracting the Add-On package, copy the files located in the <em>catalog</em> directory to your osCommerce installation directory on the server. The files must be copied in the correct directory structure as extracted from the Add-On package.</p>
+
+<p>The file listing is as follows:</p>
+
+<ul>
+  <li>admin/ext/modules/content/paypal/login.php</li>
+  <li>ext/modules/payment/paypal/paypal.com.crt</li>
+  <li>includes/languages/english/modules/content/login/cm_paypal_login.php</li>
+  <li>includes/modules/content/login/cm_paypal_login.php</li>
+  <li>includes/modules/content/login/templates/paypal_login.php</li>
+</ul>
+
+<p>The standard language definitions in English are provided in the Add-On package. For additional languages, copy the English language definition file to the appropriate language directory and open the file with a text editor to edit the language definitions. The location of the language definition file must be in:</p>
+
+<ul>
+  <li>includes/languages/<em>LANGUAGE</em>/modules/content/login/cm_paypal_login.php</li>
+</ul>
+
+<p>When the files have been copied to their appropriate locations, the content module will be available on the Administration Tool -> Modules -> Content -> Install Module page where it can be installed, or on the Administration Tool -> Modules -> Content page if the module was already previously installed.</p>
+
+<p>If the module was already previously installed, it is important to visit the module configuration page to make sure new parameters are automatically installed in the database.</p>
+
+<h2>Changelog</h2>
+
+<dl class="bulleted">
+  <dt>v1.0 xx-May-2014</dt>
+  <dd>Initial Release</dd>
+</dl>
