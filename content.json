@@ -32,8 +32,8 @@
           "package_id" :"",
           "support_url": ""
         },
-        "payments_pro_express_uk": {
-          "title": "PayPal Payments Pro (UK) Express Checkout",
+        "express_checkout_payflow": {
+          "title": "PayPal Express Checkout (Payflow Edition)",
           "package_id" :"",
           "support_url": ""
         },
