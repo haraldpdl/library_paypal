@@ -6,9 +6,6 @@
   "authors": [
     {
       "name": "Harald Ponce de Leon"
-    },
-    {
-      "name": "John Fitchett"
     }
   ],
   "chapters": {
@@ -26,7 +23,7 @@
           "support_url": ""
         },
         "payments_pro_direct": {
-          "title": "PayPal Payments Pro Direct Payments",
+          "title": "PayPal Payments Pro (Direct Payment)",
           "package_id" :"",
           "support_url": ""
         },
