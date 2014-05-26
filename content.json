@@ -27,8 +27,8 @@
           "package_id" :"",
           "support_url": ""
         },
-        "payments_pro_direct_uk": {
-          "title": "PayPal Payments Pro (UK) Direct Payments",
+        "payments_pro_payflow": {
+          "title": "PayPal Payments Pro (Payflow Edition)",
           "package_id" :"",
           "support_url": ""
         },
