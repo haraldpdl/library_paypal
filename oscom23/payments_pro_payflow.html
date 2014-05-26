@@ -1,20 +1,41 @@
-<h1>PayPal Payments Pro (UK) Direct Payments<br /><small>for osCommerce Online Merchant v2.3</small></h1>
+<h1>Payments Pro (Payflow Edition) <small>v3.0<br />for osCommerce Online Merchant v2.3</small></h1>
 
-<p>PayPal Payments Pro (UK) Direct Payments allows Debit/Credit cards to be accepted directly on a merchant's website during the checkout process.</p>
+<p>PayPal Payments Pro (Payflow Edition) allows credit cards to be accepted directly on your online store during the checkout flow without the customer having to leave the site.</p>
 
-<p>PayPal Payments Pro (UK) Direct Payments is included in osCommerce Online Merchant v2.2 and is available as a separate add-on for existing store owners who are running earlier versions.</p>
+<p>PayPal Payments Pro (Payflow Edition) is bundled with osCommerce Online Merchant and is also available as a separate Add-On package existing store owners can use to upgrade to.</p>
 
-<p>The PayPal Payments Pro (UK) Direct Payments payment module supports the following PayPal features:</p>
+<p>The PayPal Payments Pro (Payflow Edition) payment module supports the following features:</p>
 
 <ul>
-  <li>Sandbox server to perform test transactions</li>
+  <li>Process credit cards directly during the checkout flow</li>
   <li>Authorization and Sale transaction methods</li>
-  <li>Process credit and debit cards directly during the checkout procedure</li>
+  <li>SSL Certificate verified transactions</li>
+  <li>Sandbox server to perform test transactions</li>
 </ul>
 
-<div class="alert">This payment module is targeted at UK PayPal merchants and uses the Payflow payment gateway. PayPal requires the Payments Pro (UK) Express Checkout payment module to be enabled if this module is activated and therefore should not be used as a stand alone product.</div>
+<h2>Features</h2>
 
-<div class="alert">This payment module requires PHP to support cURL or access to the "curl" program file.</div>
+<h3>SSL Certificate Verified Transactions</h3>
+
+<p>All secured API transaction calls sent to PayPal are performed by verifying PayPal's SSL certificates to guarantee the identity of PayPal. This is performed by using the following public keys in order if they are available:</p>
+
+<ul>
+  <li>ext/modules/payment/paypal/paypal.com.crt</li>
+  <li>includes/cacert.pem (public key bundle)</li>
+  <li>the web server configured public key bundle</li>
+</ul>
+
+<p>A test connection link is available on the payment module configuration page which can be used to test if API transaction calls to PayPal can be verified from your web server. If the test connection fails, please contact your hosting provider as they may need to update your web server configuration. The SSL certificate verification can also be disabled on the payment module configuration page however it is highly discouraged to disable.</p>
+
+<div class="alert">Some web hosting providers require a curl proxy to be used which can be configured on the payment module configuration page.</div>
+
+<h2>Requirements</h2>
+
+<h3>PayPal Express Checkout (Payflow Edition)</h3>
+
+<p>PayPal Payments Pro (Payflow Edition) requires the additional <a href="{link}Package|Library|en&paypal&oscom23&express_checkout_payflow{link}">PayPal Express Checkout (Payflow Edition)</a> payment module to be installed and enabled on your online store. PayPal Express Checkout (Payflow Edition) is bundled with osCommerce Online Merchant and is also available as a separate Add-On package to download.</p>
+
+<p>This module will not function until PayPal Express Checkout (Payflow Edition) has been installed and enabled.</p>
 
 <h2>Configuration Settings</h2>
 
@@ -23,35 +44,34 @@
     <tr>
       <th>Parameter</th>
       <th>Description</th>
+      <th>Default</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Enable PayPal Direct (UK)</td>
-      <td>Setting this parameter to <em>True</em> makes the payment method available to customers during the checkout procedure. The credit or debit card information is entered on the checkout confirmation page.</td>
+      <td>Enable PayPal Payments Pro (Payflow Edition)</td>
+      <td>Setting this parameter to <em>True</em> makes the payment method available to customers during the checkout flow. The credit and debit card information is entered on the checkout confirmation page.</td>
+      <td><em>True</em></td>
     </tr>
     <tr>
       <td>Vendor</td>
       <td>The merchant login ID that was created when a Payments Pro account was registered.</td>
+      <td></td>
     </tr>
     <tr>
       <td>User</td>
       <td>If one or more additional users are setup on the account, this value is the ID of the user authorized to process transactions. If, however, no additional users were setup on the account, this has the same value as Vendor.</td>
+      <td></td>
     </tr>
     <tr>
       <td>Password</td>
       <td>The 6- to 32-character password that was defined during the registering of the account.</td>
+      <td></td>
     </tr>
     <tr>
       <td>Partner</td>
       <td>The ID provided by the authorized PayPal Reseller who registered you for the Payflow SDK. If the account was purchased directly from PayPal, use PayPalUK.</td>
-    </tr>
-    <tr>
-      <td>Transaction Server</td>
-      <td>
-        The transaction server to use for payment transactions.<br /><br />
-        The <em>Live</em> server is for production use to receive payments from customers, and the <em>Sandbox</em> server is used to test transactions only.
-      </td>
+      <td></td>
     </tr>
     <tr>
       <td>Transaction Method</td>
@@ -60,57 +80,108 @@
         The <em>Authorization</em> method only authorizes the transaction which can be captured up to 29 days later, and must be captured through your PayPal account page.<br /><br />
         The <em>Sale</em> method instantly transfers the funds to your PayPal account.
       </td>
+      <td><em>Sale</em></td>
     </tr>
     <tr>
-      <td>Card Acceptance Page</td>
-      <td>
-        The page during the checkout procedure that collects the card details. The card details can either be collected on the checkout payment page or the checkout confirmation page.<br /><br />
-        <div class="alert">Stores running osCommerce v2.2 Milestone 2 must use the Checkout Payment page to collect the card details on for transactions to be processed correctly.</div>
-      </td>
+      <td>Set Order Status</td>
+      <td>Set the status of orders made with this payment module to this order status level.</td>
+      <td><em>Default Order Status</em></td>
+    </tr>
+    <tr>
+      <td>PayPal Transactions Order Status</td>
+      <td>PayPal transactions are logged in this private order status level.</td>
+      <td><em>PayPal [Transactions]</em></td>
     </tr>
     <tr>
       <td>Payment Zone</td>
       <td>If set, this payment method will only be available to orders made within the defined zone.</td>
+      <td></td>
     </tr>
     <tr>
-      <td>Set Order Status</td>
-      <td>The orders status will be updated to this value when the transaction has been performed.</td>
+      <td>Transaction Server</td>
+      <td>
+        The transaction server to use for payment transactions.<br /><br />
+        The <em>Live</em> server is for production use to receive payments from customers, and the <em>Sandbox</em> server is used to test transactions only.
+      </td>
+      <td><em>Live</em></td>
+    </tr>
+    <tr>
+      <td>Verify SSL Certificate</td>
+      <td>Verify PayPal's identity when API communication calls are sent.</td>
+      <td><em>True</em></td>
+    </tr>
+    <tr>
+      <td>Proxy Server</td>
+      <td>Send API communication calls through this proxy server.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Debug E-Mail Address</td>
+      <td>Send invalid transaction parameters to this e-mail address.</td>
+      <td></td>
     </tr>
     <tr>
       <td>Sort Order</td>
       <td>The position to show the payment method on the checkout payment page against other available payment methods.</td>
-    </tr>
-    <tr>
-      <td>cURL Program Location</td>
-      <td>The location and filename of the cURL "curl" program file.</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
 
+<h2>Notes</h2>
+
+<h3>Line Items</h3>
+
+<p>Each product that is ordered is passed on to PayPal as line items to tie to the transaction. This includes extra third-party Order Total modules that manipulate the order total values (eg, discounts). In rare occassions, when the line items, shipping, and tax calculations do not match the order total value, only the order total value is passed onto PayPal without the line items.</p>
+
+<h2>Add-On Package</h2>
+
+<p>The separate PayPal Payments Pro (Payflow Edition) Add-On package is available at:</p>
+
+<p><a href="http://addons.oscommerce.com/info/5660" target="_blank">http://addons.oscommerce.com/info/5660</a></p>
+
+<h2>Online Demonstration</h2>
+
+<p>An online demonstration is available at:</p>
+
+<p><a href="http://demo.oscommerce.com" target="_blank">http://demo.oscommerce.com</a></p>
+
+<p><i>For the online demonstration, PayPal Payments Pro (Payflow Edition) has been configured with PayPal's Sandbox environment and requires a testing card number for purchases.</i></p>
+
 <h2>Manual Installation (as an Add-On)</h2>
 
-<p>After extracting the add-on package, copy the files located in the <em>catalog</em> directory to your osCommerce installation directory on the server. The files must be copied in the correct directory structure as extracted from the add-on package.</p>
+<p>After extracting the Add-On package, copy the files located in the <em>catalog</em> directory to your osCommerce installation directory on the server. The files must be copied in the correct directory structure as extracted from the Add-On package.</p>
 
 <p>The file listing is as follows:</p>
 
 <ul>
-  <li>includes/languages/english/modules/payment/paypal_uk_direct.php</li>
-  <li>includes/languages/espanol/modules/payment/paypal_uk_direct.php</li>
-  <li>includes/languages/german/modules/payment/paypal_uk_direct.php</li>
-  <li>includes/modules/payment/paypal_uk_direct.php</li>
+  <li>ext/modules/payment/paypal/paypal.com.crt</li>
+  <li>includes/languages/english/modules/payment/paypal_pro_payflow_dp.php</li>
+  <li>includes/modules/payment/paypal_pro_payflow_dp.php</li>
 </ul>
 
-<p>The standard languages definitions in English, Spanish, and German are provided in the add-on package. For additional languages, copy one of the existing language definition files to the appropriate language directory and edit the file with a text editor to edit the language definitions. The location of the language definition file must be in:</p>
+<p>The standard language definitions in English are provided in the Add-On package. For additional languages, copy the English language definition file to the appropriate language directory and open the file with a text editor to edit the language definitions. The location of the language definition file must be in:</p>
 
 <ul>
-  <li>includes/languages/<em>language</em>/modules/payment/paypal_uk_direct.php</li>
+  <li>includes/languages/<em>LANGUAGE</em>/modules/payment/paypal_pro_payflow_dp.php</li>
 </ul>
 
-<p>When the files have been copied to their appropriate locations, the payment module will be available in the Administration Tool -> Modules -> Payment Modules listing where it can be installed.</p>
+<p>When the files have been copied to their appropriate locations, the payment module will be available on the Administration Tool -> Modules -> Payment -> Install Module page where it can be installed, or on the Administration Tool -> Modules -> Payment page if the module was already previously installed.</p>
+
+<p>If the module was already previously installed, it is important to visit the module configuration page to make sure new parameters are automatically installed in the database.</p>
 
 <h2>Changelog</h2>
 
 <dl class="bulleted">
+  <dt>v3.0 xx-May-2014</dt>
+  <dd>Add line items if line item total calculations matches order total calculations.</dd>
+  <dd>Include PayPal transaction information in a private order status level.</dd>
+
+  <dt>v2.0 20-Aug-2013</dt>
+  <dd>Verify SSL connections with PayPal public key certificate.</dd>
+  <dd>Remove card entry fields from the checkout payment page (now only entered on the checkout confirmation page).</dd>
+  <dd>Add Test Connection link in module configuration page.</dd>
+
   <dt>v1.1 22-Jan-2008</dt>
   <dd>Add configuration parameter to control where the card details should be collected; either on the checkout payment or checkout confirmation page. This is needed for 2.2MS2 compatibility which can only collect card details on the checkout payment page.</dd>
   <dd>Split card owner name into two fields for the first and last name.</dd>
