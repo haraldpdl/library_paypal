@@ -27,13 +27,18 @@
           "package_id" :"",
           "support_url": ""
         },
-        "payments_pro_payflow": {
-          "title": "PayPal Payments Pro (Payflow Edition)",
+        "payments_pro_hosted": {
+          "title": "PayPal Payments Pro (Hosted Solution)",
           "package_id" :"",
           "support_url": ""
         },
         "express_checkout_payflow": {
           "title": "PayPal Express Checkout (Payflow Edition)",
+          "package_id" :"",
+          "support_url": ""
+        },
+        "payments_pro_payflow": {
+          "title": "PayPal Payments Pro (Payflow Edition)",
           "package_id" :"",
           "support_url": ""
         },
