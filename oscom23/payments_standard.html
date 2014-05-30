@@ -1,4 +1,4 @@
-<h1>Payments Standard <small>v3.0<br />for osCommerce Online Merchant v2.3</small></h1>
+<h1>Payments Standard <small>v3.1<br />for osCommerce Online Merchant v2.3</small></h1>
 
 <p>PayPal Payments Standard is bundled with osCommerce Online Merchant and is also available as a separate Add-On package existing store owners can use to upgrade to.</p>
 
@@ -377,6 +377,10 @@
 
 <p>If the customer did not finalize the payment at PayPal and does not return back to the store, the order remains in the database with the <em>Preparing [PayPal Standard]</em> order status and can be safely deleted after a period of time.</p>
 
+<h3>Line Items</h3>
+
+<p>Each product that is ordered is passed on to PayPal as line items to show to the customer during the payment flow. This includes extra third-party Order Total modules that manipulate the order total values (eg, discounts). In rare occassions, when the line items, shipping, and tax calculations do not match the order total value, only the order total value is passed onto PayPal without the line items.</p>
+
 <h2>Add-On Package</h2>
 
 <p>The separate PayPal Payments Standard Add-On package is available at:</p>
@@ -417,6 +421,9 @@
 <h2>Changelog</h2>
 
 <dl class="bulleted">
+  <dt>v3.1 xx-May-2014</dt>
+  <dd>Include line items when line item total calculations matches order total value.</dd>
+
   <dt>v3.0 27-May-2014</dt>
   <dd>Show PayPal logo on the checkout confirmation page as the payment method instead of the module public title.</dd>
   <dd>Include PayPal transaction information in a private order status level.</dd>
