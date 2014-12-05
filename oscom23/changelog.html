@@ -1,0 +1,185 @@
+<h1 class="notoc">Changelog</h1>
+
+<div class="visible-print">
+  <p>This document can be found online at:</p>
+
+  <p><a href="{link}Package|Library|en&paypal&oscom23&changelog{link}">{link}Package|Library|en&paypal&oscom23&changelog{link}</a></p>
+</div>
+
+<h2>PayPal App</h2>
+
+<dl class="bulleted">
+  <dt>v4.0 xx-Sep-2014</dt>
+  <dd>Bundle PayPal modules into App:
+    <ul>
+      <li>PayPal Payments Standard</li>
+      <li>PayPal Express Checkout</li>
+      <li>PayPal Payments Pro (Direct Payment)</li>
+      <li>PayPal Payments Pro (Direct Payment Payflow Edition)</li>
+      <li>PayPal Payments Pro (Hosted Solution)</li>
+      <li>PayPal Payments Pro (Hosted Solution Payflow Edition)</li>
+      <li>Log In with PayPal</li>
+    </ul>
+  </dd>
+</dl>
+
+<h2>Legacy Modules</h2>
+
+<h3>Express Checkout</h3>
+
+<dl class="bulleted">
+  <dt>v3.1 09-Jun-2014</dt>
+  <dd>v2.2 compatibility updates (jQuery is now injected into the page when it has not been loaded).</dd>
+
+  <dt>v3.0 27-May-2014</dt>
+  <dd>Use API 112.</dd>
+  <dd>If the Set Password account content module is installed, leave the password of the automatically created customer account for guests empty and don't e-mail the customer (requires osCommerce Online Merchant v2.3.4).</dd>
+  <dd>Show PayPal logo on the checkout confirmation page as the payment method instead of the module public title.</dd>
+  <dd>Allow a PayPal defined Page Style to be used.</dd>
+  <dd>Only add line items if line item total calculations matches order total calculations.</dd>
+  <dd>Add extra Order Total modules as product line items.</dd>
+  <dd>Additionally verify the PayPal transaction before the order is processed.</dd>
+  <dd>Allow Instant Update to prevent the customer from proceeding through Express Checkout if no shipping rates are available for the shipping destination (requires osCommerce Online Merchant v2.3.4).</dd>
+  <dd>Support Log In with PayPal Seamless Checkout.</dd>
+  <dd>Support error code 10486 for when insufficient funds are available in the customers PayPal account.</dd>
+
+  <dt>v2.0 08-Oct-2013</dt>
+  <dd>Use API 104.</dd>
+  <dd>Label public title with sandbox tag when in sandbox testing mode.</dd>
+  <dd>Add Test Connection link in module configuration page.</dd>
+  <dd>Verify SSL connections with PayPal public key certificate.</dd>
+
+  <dt>v1.2 19-Aug-2013</dt>
+  <dd>Use API 60.</dd>
+  <dd>Allow debug transaction information to be sent in an e-mail for failed transactions.</dd>
+  <dd>Pre-Configure the module for new installations with the store configured store owner e-mail address.</dd>
+
+  <dt>v1.1 18-Feb-2010</dt>
+  <dd>Use API 57.</dd>
+  <dd>Add support for PayPal Account Optional.</dd>
+  <dd>Introduce Instant Update to have PayPal retrieve shipping rates and taxes based on the shipping destination.</dd>
+  <dd>Include PayPal transaction information in a private order status level.</dd>
+  <dd>Automatically create customer accounts for guests when returning back to the store from the Express Checkout flow. Accounts are created with an automatically generated random password that is e-mailed to the customer.</dd>
+
+  <dt>v1.0 11-Jan-2008</dt>
+  <dd>Initial Release</dd>
+</dl>
+
+<h3>Express Checkout (Payflow Edition)</h2>
+
+<dl class="bulleted">
+  <dt>v3.1 09-Jun-2014</dt>
+  <dd>v2.2 compatibility updates (jQuery is now injected into the page when it has not been loaded).</dd>
+
+  <dt>v3.0 27-May-2014</dt>
+  <dd>Automatically create customer accounts for guests when returning back to the store from the Express Checkout flow.</dd>
+  <dd>If the Set Password account content module is installed, leave the password of the automatically created customer account for guests empty and don't e-mail the customer (requires osCommerce Online Merchant v2.3.4).</dd>
+  <dd>Show PayPal logo on the checkout confirmation page as the payment method instead of the module public title.</dd>
+  <dd>Allow a PayPal defined Page Style to be used.</dd>
+  <dd>Only add line items if line item total calculations matches order total calculations.</dd>
+  <dd>Add extra Order Total modules as product line items.</dd>
+  <dd>Additionally verify the PayPal transaction before the order is processed.</dd>
+
+  <dt>v2.0 22-Aug-2013</dt>
+  <dd>Label public title with sandbox tag when in sandbox testing mode.</dd>
+  <dd>Add Test Connection link in module configuration page.</dd>
+  <dd>Verify SSL connections with PayPal public key certificate.</dd>
+  <dd>Include PayPal transaction information in a private order status level.</dd>
+
+  <dt>v1.0 11-Jan-2008</dt>
+  <dd>Initial Release</dd>
+</dl>
+
+<h3>Payments Pro (Direct Payment)</h3>
+
+<dl class="bulleted">
+  <dt>v3.1 09-Jun-2014</dt>
+  <dd>v2.2 compatibility updates (jQuery is now injected into the page when it has not been loaded).</dd>
+
+  <dt>v3.0 27-May-2014</dt>
+  <dd>Use API 112.</dd>
+  <dd>Add line items if line item total calculations matches order total calculations.</dd>
+  <dd>Include PayPal transaction information in a private order status level.</dd>
+
+  <dt>v2.0 20-Aug-2013</dt>
+  <dd>Use API 104.</dd>
+  <dd>Verify SSL connections with PayPal public key certificate.</dd>
+  <dd>Remove card entry fields from the checkout payment page (now only entered on the checkout confirmation page).</dd>
+  <dd>Add Test Connection link in module configuration page.</dd>
+  <dd>Dynamically update card entry fields depending on card type.</dd>
+  <dd>Allow card types to be enabled/disabled.</dd>
+
+  <dt>v1.1 22-Jan-2008</dt>
+  <dd>Add configuration parameter to control where the card details should be collected; either on the checkout payment or checkout confirmation page. This is needed for 2.2MS2 compatibility which can only collect card details on the checkout payment page.</dd>
+
+  <dt>v1.0 11-Jan-2008</dt>
+  <dd>Initial Release</dd>
+</dl>
+
+<h3>Payments Pro (Direct Payment Payflow Edition)</h3>
+
+<dl class="bulleted">
+  <dt>v3.1 09-Jun-2014</dt>
+  <dd>v2.2 compatibility updates (jQuery is now injected into the page when it has not been loaded).</dd>
+
+  <dt>v3.0 27-May-2014</dt>
+  <dd>Add line items if line item total calculations matches order total calculations.</dd>
+  <dd>Include PayPal transaction information in a private order status level.</dd>
+
+  <dt>v2.0 20-Aug-2013</dt>
+  <dd>Verify SSL connections with PayPal public key certificate.</dd>
+  <dd>Remove card entry fields from the checkout payment page (now only entered on the checkout confirmation page).</dd>
+  <dd>Add Test Connection link in module configuration page.</dd>
+
+  <dt>v1.1 22-Jan-2008</dt>
+  <dd>Add configuration parameter to control where the card details should be collected; either on the checkout payment or checkout confirmation page. This is needed for 2.2MS2 compatibility which can only collect card details on the checkout payment page.</dd>
+  <dd>Split card owner name into two fields for the first and last name.</dd>
+
+  <dt>v1.0 11-Jan-2008</dt>
+  <dd>Initial Release</dd>
+</dl>
+
+<h3>Payments Pro (Hosted Solution)</h3>
+
+<dl class="bulleted">
+  <dt>v1.1 09-Jun-2014</dt>
+  <dd>v2.2 compatibility updates (jQuery is now injected into the page when it has not been loaded).</dd>
+  <dd>Fixed tested gateway in API Server Connection dialog.</dd>
+
+  <dt>v1.0 27-May-2014</dt>
+  <dd>Initial Release</dd>
+</dl>
+
+<h3>Payments Standard</h3>
+
+<dl class="bulleted">
+  <dt>v3.2 09-Jun-2014</dt>
+  <dd>v2.2 compatibility updates (jQuery is now injected into the page when it has not been loaded).</dd>
+
+  <dt>v3.1 01-Jun-2014</dt>
+  <dd>Include line items when line item total calculations matches order total value.</dd>
+
+  <dt>v3.0 27-May-2014</dt>
+  <dd>Show PayPal logo on the checkout confirmation page as the payment method instead of the module public title.</dd>
+  <dd>Include PayPal transaction information in a private order status level.</dd>
+
+  <dt>v2.0 22-Aug-2013</dt>
+  <dd>Label public title with sandbox tag when in sandbox testing mode.</dd>
+  <dd>Add Test Connection link in module configuration page.</dd>
+  <dd>Add additional checks when processing the order.</dd>
+
+  <dt>v1.1 28-May-2013</dt>
+  <dd>Additionally verify the PayPal transaction before the order is processed.</dd>
+  <dd>Add Primary Seller E-Mail Address parameter for cases when it is different to the Seller E-Mail Address.</dd>
+  <dd>Verify SSL connections with PayPal public key certificate.</dd>
+
+  <dt>v1.0 11-Jan-2008</dt>
+  <dd>Initial Release</dd>
+</dl>
+
+<h3>Log In with PayPal</h3>
+
+<dl class="bulleted">
+  <dt>v1.0 27-May-2014</dt>
+  <dd>Initial Release</dd>
+</dl>

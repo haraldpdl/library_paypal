@@ -1,0 +1,54 @@
+<h1 class="notoc">Global Configuration<br /><small>PayPal: Configure</small></h1>
+
+<div class="visible-print">
+  <p>This document can be found online at:</p>
+
+  <p><a href="{link}Package|Library|en&paypal&oscom23&configuration{link}">{link}Package|Library|en&paypal&oscom23&configuration{link}</a></p>
+</div>
+
+<p>Global configuration parameters affect all App modules and can be configured on the <i>Configure</i> page using the <i>General</i> button.</p>
+
+{image}app-configure-01.png|Managing the PayPal account API Credentials{image}
+
+<dl>
+  <dt>Gateway</dt>
+  <dd>This should be left as PayPal unless you have set up your PayPal account to process payments through Payflow. Setting this to Payflow affects the following modules:</dd>
+  <dd>
+    <ul>
+      <li>PayPal Express Checkout</li>
+      <li>PayPal Payments Pro (Direct Payments)</li>
+    </ul>
+  </dd>
+
+  <dt>Transactions Order Status</dt>
+  <dd>This is the Order Status level where the result of API transactions are stored. This Order Status level should be private and should not be visible to customers when they view their order information.</dd>
+
+  <dt>Verify SSL</dt>
+  <dd>Keeping this enabled ensures the connections to PayPal's servers are secure and are not being tampered with. This uses the following public keys in order if they are available:</dd>
+  <dd>
+    <ul>
+      <li>ext/modules/payment/paypal/paypal.com.crt</li>
+      <li>includes/cacert.pem (public key bundle)</li>
+      <li>the php / web server configured public key bundle</li>
+    </ul>
+  </dd>
+  <dd>If connections to PayPal's servers cannot be made, disabling this setting may help however it is recommended to find a solution that allows this settings to remain enabled.</dd>
+
+  <dt>Proxy</dt>
+  <dd>Some hosting providers require a proxy to be used for cURL connections to be made.</dd>
+
+  <dt>Log Transactions</dt>
+  <dd>The request and response values of each API transaction call can be logged to identify and help find a solution to any problem. It is recommended to log all API calls when beginning to use the App and to change it to log only errors when all App features have been tested.</dd>
+</dl>
+
+<h2 class="notoc">Module Configuration</h2>
+
+<p>App modules that have already been enabled can be configured using their respective configuration buttons. Additional App modules can be enabled using the <i>+</i> button and selecting from a list of available modules to install.</p>
+
+{image}app-configure-02.png|Installing additional App modules{image}
+
+<p>After a new module has been installed, it performs requirement checks to make sure the module can be enabled on the store. If any requirements are not met, the module remains in a disabled state until the requirement has been fixed.</p>
+
+{image}app-configure-03.png|Notification of a requirement for a new module{image}
+
+<p>In the image above, a notification is displayed due to missing API Credentials. The module will remain in a disabled state until the Live credentials have been entered or the module has been configured to use the Sandbox credentials.</p>
