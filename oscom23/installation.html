@@ -1,11 +1,162 @@
 <h1 class="notoc">Installation</h1>
 
-<div class="visible-print">
-  <p>This document can be found online at:</p>
+<p>The PayPal App is bundled with osCommerce Online Merchant v2.3.5 and can be downloaded separately to install on existing or earlier installations. The App is compatible with and can be installed from osCommerce Online Merchant v2.2RC2a onwards.</p>
 
-  <p><a href="{link}Package|Library|en&paypal&oscom23&installation{link}">{link}Package|Library|en&paypal&oscom23&installation{link}</a></p>
-</div>
-
-<p>The PayPal App is bundled with osCommerce Online Merchant v2.3.5 and can be downloaded separately to install on existing or earlier installations.</p>
+<div class="note">Usage of advanced features of the App require additional changes to be applied to existing installations. Please review the Legacy Changes section below.</div>
 
 <h2 class="notoc">Download</h2>
+
+<p>The full PayPal App download package is available at:</p>
+
+<p><a href="http://addons.oscommerce.com/info/9184" target="_blank">http://addons.oscommerce.com/info/9184</a></p>
+
+<p>After extracting the App package, copy the files located in the <em>catalog</em> directory to your osCommerce Online Merchant installation directory on the server. The files must be copied in the correct directory structure as extracted from the App package.</p>
+
+<div class="achtung">Please do not copy the <em>docs</em> directory to your webserver as this directory contains PHP files that should not be publicly accessible.</div>
+
+<h2 class="notoc">Legacy Changes</h2>
+
+<p>Existing osCommerce Online Merchant installations up to and including v2.3.4 require the following code changes to be performed:</p>
+
+<ol>
+  <li>Administration Tool App Setup</li>
+  <li>Hooks for the Administration Tool and Catalog</li>
+  <li>Administration Tool Order Administration Page</li>
+  <li>Public CA Certificate Bundle</li>
+</ol>
+
+<p>Only the changes in (1) are required to add the PayPal App links to the Administration Tool. Changes (2), (3), and (4) are optional and are needed if transaction management is to be added to the Administration Tool Orders management page (this requires a new order management page which may overwrite installed Add-Ons).</p>
+
+<div class="info">The versions described below are inclusive of the version stated (eg, v2.3.3.2 affects all versions up to and including v2.3.3.2).</div>
+
+<h3 class="notoc">1. Administration Tool App Setup</h3>
+
+<h4 class="notoc">osCommerce Online Merchant up to v2.3.3.2 (5-Sept-2013)</h4>
+
+<p>In catalog/admin/includes/column_left.php, add the following to the collection of existing boxes being included:</p>
+
+{code}
+include(DIR_WS_BOXES . 'paypal.php');
+{code}
+
+<h4 class="notoc">osCommerce Online Merchant up to v2.2 RC2a (30-Jan-2008)</h4>
+
+<p>Copy (and overwrite) the following files from:</p>
+
+{code}
+docs/legacy/v22rc2a/admin/includes/boxes/paypal.php
+docs/legacy/v22rc2a/admin/includes/template_top.php
+docs/legacy/v22rc2a/admin/includes/template_bottom.php
+{code}
+
+<p>to:</p>
+
+{code}
+catalog/admin/includes/boxes/paypal.php
+catalog/admin/includes/template_top.php
+catalog/admin/includes/template_bottom.php
+{code}
+
+<h3 class="notoc">2. Hooks for the Administration Tool and Catalog</h3>
+
+<h4 class="notoc">osCommerce Online Merchant up to v2.3.4 (5-June-2014)</h4>
+
+<p>Copy the following file from:</p>
+
+{code}
+docs/legacy/v234/includes/classes/hooks.php
+{code}
+
+<p>to:</p>
+
+{code}
+catalog/includes/classes/hooks.php
+{code}
+
+<p>In the following file:</p>
+
+{code}
+catalog/includes/application_top.php
+{code}
+
+<p>add to the bottom (before ?>):</p>
+
+{code}
+require(DIR_FS_CATALOG . 'includes/classes/hooks.php');
+$OSCOM_Hooks = new hooks('shop');
+{code}
+
+<p>In the following file:</p>
+
+{code}
+catalog/admin/includes/application_top.php
+{code}
+
+<p>add to the bottom (before ?>):</p>
+
+{code}
+require(DIR_FS_CATALOG . 'includes/classes/hooks.php');
+$OSCOM_Hooks = new hooks('admin');
+{code}
+
+<h3 class="notoc">3. Administration Tool Order Administration Page</h3>
+
+<h4 class="notoc">osCommerce Online Merchant up to v2.3.4 (5-June-2014)</h4>
+
+<p>Copy (and overwrite) the following file from:</p>
+
+{code}
+docs/legacy/v234/admin/includes/classes/order.php
+{code}
+
+<p>to:</p>
+
+{code}
+catalog/admin/includes/classes/order.php
+{code}
+
+<p>Copy (and overwrite) the following file from:</p>
+
+{code}
+docs/legacy/v234/admin/orders.php
+{code}
+
+<p>to:</p>
+
+{code}
+catalog/admin/orders.php
+{code}
+
+<p>In all catalog/admin/includes/languages/LANGUAGE/orders.php language files, add the following language definition:</p>
+
+{code}
+define('ENTRY_ADD_COMMENT', 'Add Comment:');
+{code}
+
+<h3 class="notoc">4. Public CA Certificate Bundle</h3>
+
+<h4 class="notoc">osCommerce Online Merchant up to v2.3.3 (15-August-2012)</h4>
+
+<p>Copy the following file from:</p>
+
+{code}
+docs/legacy/v233/includes/cacert.pem
+{code}
+
+<p>to:</p>
+
+{code}
+catalog/includes/cacert.pem
+{code}
+
+<h2 class="notoc">First Run</h2>
+
+<p>When the files have been copied to their appropriate locations and the <em>Legacy Changes</em> have been performed, a new PayPal navigation menu box will show in the Administration Tool. The first time the App is run, it automatically configures itself and migrates older module configuration parameters to the App parameters, and checks if an online update is available.</p>
+
+<h2 class="notoc">Language Definitions</h2>
+
+<p>The core language definitions in English are provided in the App package. Additional languages can be created by basing the language files on the existing English files. Definitions that have not yet been translated will display in English. The language definitions are located in:</p>
+
+{code}
+includes/apps/paypal/languages/
+{code}

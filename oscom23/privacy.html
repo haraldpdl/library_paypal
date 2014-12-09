@@ -1,16 +1,10 @@
 <h1 class="notoc">Privacy Policy</h1>
 
-<div class="visible-print">
-  <p>This document can be found online at:</p>
+<h2 class="notoc">API Credentials <small>(available for US, UK countries only)</small></h2>
 
-  <p><a href="{link}Package|Library|en&paypal&oscom23&privacy{link}">{link}Package|Library|en&paypal&oscom23&privacy{link}</a></p>
-</div>
+<p>The PayPal App for osCommerce Online Merchant allows store owners to automatically setup and configure the App with their PayPal API credentials without the need to enter them manually. This is performed securely by granting osCommerce access to retrieve the API credentials from the store owners PayPal account.</p>
 
-<h2 class="notoc">API Credentials</h2>
-
-<p>The PayPal App for osCommerce Online Merchant allows store owners to automatically setup and configure the App with their PayPal API credientials without the need to enter their credentials in manually. This is performed securely by granting osCommerce access to retrieve the API credentials from the store owners PayPal account.</p>
-
-<p>Granting osCommerce access allows the following limited information to be retrieved:</p>
+<p>Granting osCommerce access allows the following limited information to be retrieved from the store owners PayPal account:</p>
 
 <ul>
   <li>API Username</li>
@@ -21,7 +15,7 @@
 
 <p>No other account information is accessed (eg, PayPal account username or password, account balance, transaction history, etc.).</p>
 
-<p>The API Username, API Password, API Signature, and Account ID information are used to automatically configure the PayPal payment and content modules bundled in the PayPal App for osCommerce Online Merchant, including:</p>
+<p>The API Username, API Password, API Signature, and Account ID information are used to automatically configure the PayPal modules bundled in the PayPal App, including:</p>
 
 <ul>
   <li>PayPal Payments Standard</li>
@@ -31,10 +25,10 @@
   <li>Log In with PayPal</li>
 </ul>
 
-<p>The process is started by using the "Start with a Live Account" and "Start with a Sandbox Account" buttons displayed on the PayPal App introduction page. The store owner is securely taken to PayPal's website where they are asked to grant osCommerce access to retrieve the API credentials, and are then redirected back to their online store to continue configuration of the PayPal App. This is performed with the following steps:</p>
+<p>The process is started by using the "Retrieve Live Credentials" and "Retrieve Sandbox Credentials" buttons displayed on the PayPal App start and credentials management pages. The store owner is securely taken to PayPal's website where they are asked to grant osCommerce access to retrieve the API credentials, and are then redirected back to their online store to continue configuration of the PayPal App. This is performed with the following steps:</p>
 
 <ol>
-  <li>The store owner clicks on "Start with a Live Account" or "Start with a Sandbox Account" and is securely taken to an initialization page on the osCommerce website that registers the request and immediately redirects the store owner to an on-boarding page on the PayPal website. osCommerce registers the following information in the request:
+  <li>The store owner clicks on "Retrieve Live Credentials" or "Retrieve Sandbox Credentials" and is securely taken to an initialization page on the osCommerce website that registers the request and immediately redirects the store owner to an on-boarding page on the PayPal website. osCommerce registers the following information in the request:
     <ul>
       <li>A uniquely generated session ID.</li>
       <li>A secret ID to match against the session ID.</li>
@@ -60,7 +54,7 @@
 </ol>
 
 <div class="note">
-  The API Credentials retrieved from the store owners PayPal account are only used to configure the PayPal App. osCommerce temporarily stores and uses the API Credentials as described in this privacy policy, and discards the API Credentials as soon as the process is over. A back-end script is also run to discard any stored information for processes that have not finalized.
+  The API Credentials retrieved from the store owners PayPal account are only used to configure the PayPal App. osCommerce temporarily stores the API Credentials as described in this privacy policy, and discards the API Credentials as soon as the process is over. A back-end script is also run to discard any stored information for processes that have not finalized.
 </div>
 
 <div class="info">
@@ -92,5 +86,15 @@
 </ul>
 
 <div class="info">
-  The parameters of each transaction sent to and recieved from PayPal can be inspected on the PayPal App -&gt; Log page.
+  The parameters of each transaction sent to and recieved from PayPal can be inspected on the PayPal App Log page.
 </div>
+
+<h2 class="notoc">App Updates</h2>
+
+<p>The PayPal App for osCommerce Online Merchant automatically checks the osCommerce website for updates that are available to the App. This check is performed once every 24 hours and if an update is available, a notification is shown to allow the App to download and apply the update.</p>
+
+<p>A manual check for available updates is also performed on the PayPal App Info page.</p>
+
+<h2 class="notoc">Google Hosted Libraries (jQuery and jQuery UI)</h2>
+
+<p>If jQuery or jQuery UI are not already loaded in the Administration Tool, the PayPal App administration pages automatically load the libraries securely through Google Hosted Libraries.</p>

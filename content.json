@@ -63,17 +63,22 @@
           "support_url": ""
         },
         "balance": {
-          "title": "Balance",
+          "title": "Account Balance",
           "package_id": "",
           "support_url": ""
         },
-        "logging": {
-          "title": "Logging",
+        "api_logging": {
+          "title": "API Logging",
           "package_id": "",
           "support_url": ""
         },
         "online_updates": {
           "title": "Online Updates",
+          "package_id": "",
+          "support_url": ""
+        },
+        "order_administration": {
+          "title": "Order Administration",
           "package_id": "",
           "support_url": ""
         },
@@ -84,11 +89,6 @@
         },
         "demonstration": {
           "title": "Online Demonstration",
-          "package_id": "",
-          "support_url": ""
-        },
-        "legacy_changes": {
-          "title": "Legacy Changes",
           "package_id": "",
           "support_url": ""
         },

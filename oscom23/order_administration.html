@@ -1,0 +1,28 @@
+<h1 class="notoc">Order Administration</h1>
+
+<p>The redesigned order administration page displays the order information in a tabbed interface. This allows the interface to be extended by modules where the PayPal App adds a <i>PayPal</i> tab for orders that have been processed through PayPal. This adds the following functionality to the order administration page:</p>
+
+<ul>
+  <li>Full or partial capture of authorizated transactions</li>
+  <li>Full or partial refunds of captured transactions</li>
+  <li>Cancelling authorized transactions</li>
+  <li>Retrieving the current status of the transaction</li>
+</ul>
+
+{image}app-order_administration-01.png|The redesigned order administration page with a tabbed interface{image}
+
+<p>The PayPal tab displays additional action buttons depending on the current state of the order.</p>
+
+{image}app-order_administration-02.png|Additional order action buttons in the PayPal tab{image}
+
+<p>Capturing authorized transactions can occur in whole or through partial amounts. If authorized transactions are captured partially, an option is available to release the remaining amount if the remaining amount is not to be captured for the order.</p>
+
+{image}app-order_administration-03.png|Capturing a transaction in whole or partially{image}
+
+<p>As soon as an order administration action is performed, the order information page is reloaded with a status notification of the action being shown at the top of the page and for successful actions, additional transactional information is stored as an order status comment.</p>
+
+{image}app-order_administration-04.png|Performing a partial capture on an authorized transaction{image}
+
+<p>The PayPal App detects that the current status of the order has changed and now displays a refund button to be able to refund captured authorizations.</p>
+
+{image}app-order_administration-05.png|Refunding a previously captured transaction{image}

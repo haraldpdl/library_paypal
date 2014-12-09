@@ -1,23 +1,29 @@
 <h1 class="notoc">Changelog</h1>
 
-<div class="visible-print">
-  <p>This document can be found online at:</p>
-
-  <p><a href="{link}Package|Library|en&paypal&oscom23&changelog{link}">{link}Package|Library|en&paypal&oscom23&changelog{link}</a></p>
-</div>
-
 <h2>PayPal App</h2>
 
 <dl class="bulleted">
-  <dt>v4.0 xx-Sep-2014</dt>
+  <dt>v4.027 28-Nov-2014</dt>
+  <dd>Add support for Payments Standard Payment Data Transfer (PDT). If the Identity Token has not been configured, use the API Credentials to retrieve the transaction information.</dd>
+  <dd>Add support for admin order transactions to Payments Standard and Hosted Solution.</dd>
+  <dd>Redirect to the order status history tab after an admin order transaction has been performed.</dd>
+  <dd>Bug: Fix order total and transaction total comparison mismatch notification stored in the order status comment.</dd>
+
+  <dt>v4.016 08-Nov-2014</dt>
+  <dd>Minor compatibility updates for v2.2rc2a.</dd>
+  <dd>Payments Standard: Add stock level management and order email notifications to IPN.</dd>
+  <dd>Add compatibility with v2.3.5 shipping class get_first() class method. If class method is not found, revert to using cheapest() class method.</dd>
+
+  <dt>v4.000 31-Oct-2014</dt>
+  <dd>Initial beta release.</dd>
   <dd>Bundle PayPal modules into App:
     <ul>
       <li>PayPal Payments Standard</li>
       <li>PayPal Express Checkout</li>
+      <li>PayPal Express Checkout (Payflow Edition)</li>
       <li>PayPal Payments Pro (Direct Payment)</li>
       <li>PayPal Payments Pro (Direct Payment Payflow Edition)</li>
       <li>PayPal Payments Pro (Hosted Solution)</li>
-      <li>PayPal Payments Pro (Hosted Solution Payflow Edition)</li>
       <li>Log In with PayPal</li>
     </ul>
   </dd>
