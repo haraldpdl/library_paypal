@@ -1,0 +1,34 @@
+<h3 class="notoc">Global Configuration <small>PayPal: Configure</small></h3>
+
+<p>Global configuration parameters affect all App modules and can be configured on the <span class="label label-default">Configure</span> page using the <span class="label label-info">General</span> button.</p>
+
+{image}app-configure-01.png|Managing the PayPal account API Credentials{image}
+
+<dl>
+  <dt>Gateway</dt>
+  <dd>This should be left as PayPal unless you have set up your PayPal account to process payments through Payflow. Setting this to Payflow affects the following modules:</dd>
+  <dd>
+    <ul>
+      <li>PayPal Express Checkout</li>
+      <li>PayPal Payments Pro (Direct Payments)</li>
+    </ul>
+  </dd>
+
+  <dt>Transactions Order Status</dt>
+  <dd>This is the Order Status level where the result of API transactions are stored. This Order Status level should be private and should not be visible to customers when they view their order information.</dd>
+
+  <dt>Log Transactions</dt>
+  <dd>The request and response values of each API transaction call can be logged to identify and help find a solution to any problem. It is recommended to log all API calls when beginning to use the App and to change it to log only errors when all App features have been tested.</dd>
+</dl>
+
+<h2 class="notoc">Module Configuration</h2>
+
+<p>App modules that have already been enabled can be configured using their respective configuration buttons. Additional App modules can be enabled using the <span class="label label-info">Install</span> button and selecting from a list of available modules to install.</p>
+
+{image}app-configure-02.png|Installing additional App modules{image}
+
+<p>After a new module has been installed, it performs requirement checks to make sure the module can be enabled on the store. If any requirements are not met, the module remains in a disabled state until the requirement has been fixed.</p>
+
+{image}app-configure-03.png|Notification of a requirement for a new module{image}
+
+<p>In the image above, a notification is displayed due to missing API Credentials. The module will remain in a disabled state until the Live credentials have been entered or the module has been configured to use the Sandbox credentials.</p>

@@ -9,6 +9,91 @@
     }
   ],
   "chapters": {
+    "oscom24": {
+      "title": "App for osCommerce Online Merchant v2.4",
+      "pages": {
+        "introduction": {
+          "title": "Introduction",
+          "package_id": "",
+          "support_url": ""
+        },
+        "start": {
+          "title": "Starting the App",
+          "package_id": "",
+          "support_url": ""
+        },
+        "credentials_retrieve": {
+          "title": "Retrieve API Credentials",
+          "package_id": "",
+          "support_url": ""
+        },
+        "credentials": {
+          "title": "Manage API Credentials",
+          "package_id": "",
+          "support_url": ""
+        },
+        "configuration": {
+          "title": "Global Configuration",
+          "package_id": "",
+          "support_url": ""
+        },
+        "express_checkout": {
+          "title": "Express Checkout",
+          "package_id": "",
+          "support_url": ""
+        },
+        "direct_payment": {
+          "title": "Direct Payment",
+          "package_id": "",
+          "support_url": ""
+        },
+        "hosted_solution": {
+          "title": "Hosted Solution",
+          "package_id": "",
+          "support_url": ""
+        },
+        "payments_standard": {
+          "title": "Payments Standard",
+          "package_id": "",
+          "support_url": ""
+        },
+        "log_in": {
+          "title": "Log In with PayPal",
+          "package_id": "",
+          "support_url": ""
+        },
+        "balance": {
+          "title": "Account Balance",
+          "package_id": "",
+          "support_url": ""
+        },
+        "api_logging": {
+          "title": "API Logging",
+          "package_id": "",
+          "support_url": ""
+        },
+        "order_administration": {
+          "title": "Order Administration",
+          "package_id": "",
+          "support_url": ""
+        },
+        "demonstration": {
+          "title": "Online Demonstration",
+          "package_id": "",
+          "support_url": ""
+        },
+        "privacy": {
+          "title": "Privacy Policy",
+          "package_id": "",
+          "support_url": ""
+        },
+        "changelog": {
+          "title": "Changelog",
+          "package_id": "",
+          "support_url": ""
+        }
+      }
+    },
     "oscom23": {
       "title": "App for osCommerce Online Merchant v2.3",
       "pages": {

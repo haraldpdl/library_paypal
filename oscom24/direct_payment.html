@@ -1,0 +1,66 @@
+<h3 class="notoc">Payments Pro (Direct Payment) <small>PayPal: Configure &rarr; Direct Payment</small></h3>
+
+<p>PayPal Payments Pro (Direct Payment) allows credit and debit cards to be accepted directly on your online store's checkout flow without the customer having to leave the store.</p>
+
+<p>This module can use both PayPal and Payflow to process transactions with and can be configured on the <span class="label label-default">Configure</span> &rarr; <span class="label label-info">General</span> page.</p>
+
+<h4 class="notoc">Requirements</h4>
+
+<h5 class="notoc">PayPal Express Checkout</h5>
+
+<p>PayPal Payments Pro (Direct Payment) requires the additional <a href="{link}Package|Library|en&paypal&oscom23&express_checkout{link}">PayPal Express Checkout</a> payment module to be installed and enabled on your online store. This module will not function until PayPal Express Checkout has been enabled.</p>
+
+<h4 class="notoc">Configuration Settings</h4>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Status</td>
+      <td>Set this to <em>Live</em> to use this module with the Live API Credentials, or to <em>Sandbox</em> for the Sandbox API Credentials. <em>Disabled</em> disables the module as a payment method.</td>
+      <td><em>Live</em></td>
+    </tr>
+    <tr>
+      <td>Cards</td>
+      <td>Select the type of cards to accept payments from.</td>
+      <td>
+        <em>Visa</em><br />
+        <em>MasterCard</em><br />
+        <em>Discover Card</em><br />
+        <em>American Express</em><br />
+        <em>Maestro</em>
+      </td>
+    </tr>
+    <tr>
+      <td>Transaction Method</td>
+      <td>
+        The transaction method to use for payments.<br /><br />
+        The <em>Authorization</em> method only authorizes the transaction which can be captured up to 29 days later.<br />
+        The <em>Sale</em> method instantly transfers the funds from the customer to your PayPal account.
+      </td>
+      <td><em>Sale</em></td>
+    </tr>
+    <tr>
+      <td>Order Status</td>
+      <td>Set the status of orders made with this payment module to this order status level.</td>
+      <td><em>Default Order Status</em></td>
+    </tr>
+    <tr>
+      <td>Payment Zone</td>
+      <td>If set, this payment method will only be available to orders made within the defined zone.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 class="notoc">Notes</h4>
+
+<h5 class="notoc">Line Items</h5>
+
+<p>Each product that is ordered is passed on to PayPal as line items to link to the transaction. This includes extra third-party Order Total modules that manipulate the order total values (eg, discounts). In rare occassions, when the line items, shipping, and tax calculations do not match the order total value, only the order total value is passed onto PayPal without the line items.</p>

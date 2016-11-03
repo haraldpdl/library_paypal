@@ -1,0 +1,29 @@
+<h3 class="notoc">API Logging <small>PayPal: Log</small></h3>
+
+<p>All parameters sent in and received from an API call are recorded in the App. Each record can be inspected to follow through the process of a transaction and to help in finding the cause of a problem when transactions are not being processed sucessfully.</p>
+
+{image}app-api_logging-01.png|API calls that have been logged{image}
+
+<div class="note">By default, all API calls are recorded to help start out with the App. As soon as succesful transactions have been processed in a live running store, it is recommended to set the logging of API calls to record errors only in the <i>Global Configuration</i> otherwise the size of the database will increase as each API call is logged.</div>
+
+<p>Each API call has an <i>Action</i> logged to describe the nature of the call and which module was responsible for performing it. It's success or failure result can be quickly identified by a green or red tag. Green tags reference API calls that were performed successfully and red tags reference API calls that have failed. The module responsible for the API call is logged in its short form and can be identified as:</p>
+
+<dl>
+  <dt>APP</dt>
+  <dd>A general call from the PayPal <u>App</u>, commonly called from the Orders administration page (captures and refunds).</dd>
+
+  <dt>DP</dt>
+  <dd>PayPal Payments Pro (<u>D</u>irect <u>P</u>ayment)</dd>
+
+  <dt>EC</dt>
+  <dd>PayPal <u>E</u>xpress <u>C</u>heckout</dd>
+
+  <dt>HS</dt>
+  <dd>PayPal Payments Pro (<u>H</u>osted <u>S</u>olution)</dd>
+
+  <dt>LOGIN</dt>
+  <dd><u>Log In</u> with PayPal</dd>
+
+  <dt>PS</dt>
+  <dd>PayPal <u>P</u>ayments <u>S</u>tandard</dd>
+</dl>

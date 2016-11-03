@@ -1,0 +1,115 @@
+<h3 class="notoc">Log In with PayPal <small>PayPal: Configure &rarr; Log In</small></h3>
+
+<p>Log In with PayPal allows guests to authenticate themselves through PayPal and to securely share their personal and shipping address information without the need to create a customer account on your store. The shared information is used to calculate taxes and to retrieve a list of available shipping rates for their order based on their shipping address.</p>
+
+<p>When guests authenticate themselves through PayPal, their default payment method is automatically set to PayPal Express Checkout which they can use without needing to sign into again.</p>
+
+{image}log_in-minibrowser.png|Log In with PayPal Mini-Browser Window{image}
+
+<h4 class="notoc">Features</h4>
+
+<h5 class="notoc">Seamless Checkout</h5>
+
+<p>Seamless Checkout requires the <a href="{link}Package|Library|en&paypal&oscom23&express_checkout{link}">PayPal Express Checkout</a> module to be enabled and allows customers who have logged in through PayPal to proceed straight to the Express Checkout flow without needing to log in again.</p>
+
+<h4 class="notoc">Requirements</h4>
+
+<p>Log In with PayPal requires the following:</p>
+
+<ul>
+  <li>PayPal REST App; a PayPal REST App needs to be created at the <a href="https://developer.paypal.com" target="_blank">PayPal Developer</a> site. The Client ID and Secret API credentials assigned to the application need to be entered in the module configuration page.</li>
+  <li>The Return URL displayed in the module configuration page needs to be entered as the Return URL in the PayPal REST App created for Log In with PayPal.</li>
+  <li>Set Password Content Module; it is important to enable the Set Password content module to automatically replace the My Account -> Change Password link to a Set Password link.</li>
+</ul>
+
+<h4 class="notoc">Configuration Settings</h4>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Status</td>
+      <td>Set this to <em>Live</em> to use this module with the Live REST Credentials, or to <em>Test</em> for the Test Credentials. <em>Disabled</em> disables the module.</td>
+      <td><em>Live</em></td>
+    </tr>
+    <tr>
+      <td>Live Client ID</td>
+      <td>The Client ID of the Live PayPal REST Application to use.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Live Secret</td>
+      <td>The Secret of the Live PayPal REST Application to use.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Test Client ID</td>
+      <td>The Client ID of the Test PayPal REST Application to use.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Test Secret</td>
+      <td>The Secret of the Test PayPal REST Application to use.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Theme</td>
+      <td>A Blue and Neutral theme is available for the design of the Log In with PayPal button.</td>
+      <td><em>Blue</em></td>
+    </tr>
+    <tr>
+      <td>Information Requested From Customers</td>
+      <td>The attributes the customer shares. All attributes are selected by default. The minimum attributes required are defined by a radio button which cannot be deselected.<br /><br /><div class="note">The selected attributes must match the attributes selected in the PayPal Application settings.</div></div></td>
+      <td>
+        <dl>
+          <dt><em>Personal Information</em></dt>
+          <dd><em>Full Name</em></dd>
+          <dd><em>Date of Birth</em></dd>
+          <dd><em>Age Range</em></dd>
+          <dd><em>Gender</em></dd>
+
+          <dt><em>Address Information</em></dt>
+          <dd><em>Email Address</em></dd>
+          <dd><em>Street Address</em></dd>
+          <dd><em>City</em></dd>
+          <dd><em>State</em></dd>
+          <dd><em>Country</em></dd>
+          <dd><em>Zip Code</em></dd>
+          <dd><em>Telephone Number</em></dd>
+
+          <dt><em>Account Information</em></dt>
+          <dd><em>Account Status (verified)</em></dd>
+          <dd><em>Account Type</em></dd>
+          <dd><em>Account Creation Date</em></dd>
+          <dd><em>Time Zone</em></dd>
+          <dd><em>Locale</em></dd>
+          <dd><em>Language</em></dd>
+
+          <dt><em>Checkout Express</em></dt>
+          <dd><em>Seamless Checkout</em></dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 class="notoc">Notes</h4>
+
+<h5 class="notoc">Customer Accounts</h5>
+
+<p>Log In with PayPal allows guest purchases to be made without the customer needing to create or log into their local store account. As a customer account is needed to track orders, when the customer returns back to the store after logging in through PayPal, either:</p>
+
+<ul>
+  <li>they are automatically logged into their store account matching the same e-mail address, or</li>
+  <li>a store account based on their PayPal e-mail address is automatically created with an empty password</li>
+</ul>
+
+<p>Customers cannot log into automatically created store accounts until they set a password on the My Account -> Set Password page, and can continue to log in through PayPal until a password has been set.</p>
+
+<div class="note">Please note that the sharing of customer email addresses does not authorize your business to email consumers. For any communications not related to a purchase (such as marketing emails, newsletters, and offers), you must continue to present your customers with separate opt-in/out options.</div>

@@ -1,0 +1,50 @@
+<h3 class="notoc">Payments Pro (Hosted Solution) <small>PayPal: Configure &rarr; Hosted Solution</small></h3>
+
+<p>PayPal Payments Pro (Hosted Solution) allows credit and debit cards to be accepted directly on your online store's checkout flow without the customer having to leave the store. The payment fields are loaded directly and securely from PayPal's servers in an iframe.</p>
+
+<h4 class="notoc">Configuration Settings</h4>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Status</td>
+      <td>Set this to <em>Live</em> to use this module with the Live API Credentials, or to <em>Sandbox</em> for the Sandbox API Credentials. <em>Disabled</em> disables the module as a payment method.</td>
+      <td><em>Live</em></td>
+    </tr>
+    <tr>
+      <td>Transaction Method</td>
+      <td>
+        The transaction method to use for payments.<br /><br />
+        The <em>Authorization</em> method only authorizes the transaction which can be captured up to 29 days later.<br />
+        The <em>Sale</em> method instantly transfers the funds from the customer to your PayPal account.
+      </td>
+      <td><em>Sale</em></td>
+    </tr>
+    <tr>
+      <td>Preparing Order Status</td>
+      <td>
+        The customers order is saved in the database on the checkout confirmation page before the customer is forwarded to PayPal if they choose PayPal as their payment method. The order is saved in the database with this defined order status.<br /><br />
+        The order status is updated again when the customer finalizes the payment at PayPal and returns back to the store. The order status is also updated when the Instant Payment Notification from PayPal is received.<br /><br />
+        If the customer does not finalize the payment at PayPal, the order remains in the database with this order status and can be removed after a period of time.
+      </td>
+      <td><em>Preparing [PayPal Pro HS]</em></td>
+    </tr>
+    <tr>
+      <td>Order Status</td>
+      <td>The orders status will be updated to this value when the customer returns back to the store after payment has been made at PayPal or when the Instant Payment Notification is received and the order has been verified.</td>
+      <td><em>Default Order Status</em></td>
+    </tr>
+    <tr>
+      <td>Payment Zone</td>
+      <td>If set, this payment method will only be available to orders made within the defined zone.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
