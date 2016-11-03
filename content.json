@@ -2,7 +2,7 @@
   "title": "PayPal",
   "image": "logo.png",
   "description": "PayPal Apps for osCommerce Online Merchant.",
-  "copyright": "Copyright (c) 2008-2014 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
+  "copyright": "Copyright (c) 2016 osCommerce. All rights reserved. Content may be reproduced for personal use only.",
   "authors": [
     {
       "name": "Harald Ponce de Leon"
@@ -10,7 +10,7 @@
   ],
   "chapters": {
     "oscom23": {
-      "title": "App for osCommerce Online Merchant v2.2 and v2.3",
+      "title": "App for osCommerce Online Merchant v2.3",
       "pages": {
         "introduction": {
           "title": "Introduction",

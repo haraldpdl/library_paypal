@@ -1,22 +1,22 @@
-<h1 class="notoc">Express Checkout<br /><small>PayPal: Configure &rarr; Express Checkout</small></h1>
+<h3 class="notoc">Express Checkout <small>PayPal: Configure &rarr; Express Checkout</small></h3>
 
 <p>PayPal Express Checkout is automatically pre-configured for new osCommerce Online Merchant installations where payments are sent to the configured store owner e-mail address. This allows store owners to start accepting payments immediately and to complete their PayPal merchant account when their first payments have arrived.</p>
 
-<p>This module can use both PayPal and Payflow to process transactions with and can be configured on the <i>Configure &rarr; General</i> page.</p>
+<p>This module can use both PayPal and Payflow to process transactions with and can be configured on the <span class="label label-default">Configure</span> &rarr; <span class="label label-info">General</span> page.</p>
 
-<h2 class="notoc">Features</h2>
+<h4 class="notoc">Features</h4>
 
-<h3 class="notoc">Seamless Checkout</h3>
+<h5 class="notoc">Seamless Checkout</h5>
 
 <p>Seamless Checkout requires the <a href="{link}Package|Library|en&paypal&oscom23&log_in{link}">Log In with PayPal</a> module to be enabled and allows customers who have logged in through PayPal to proceed straight to the Express Checkout flow without needing to log in again.</p>
 
-<h3 class="notoc">Instant Update</h3>
+<h5 class="notoc">Instant Update</h5>
 
 <p>As soon as the customer has logged in at PayPal or has provided their shipping address during the Express Checkout flow, PayPal contacts your online store to retrieve a list of applicable shipping rates and taxes for the shipping destination. The customer is able to choose their preferred shipping rate which is passed back to the store to use for the order.</p>
 
 <p>As of osCommerce Online Merchant v2.3.4, orders can be blocked when no shipping rate for the destination is available. If this is enabled and Instant Update detects that no shipping rates are available, it requests the customer to select or enter a new shipping address during the Express Checkout flow and prevents them to continue with the order until a valid shipping destination has been selected.</p>
 
-<h4 class="notoc">Requirements</h4>
+<h6 class="notoc">Requirements</h6>
 
 <p>Instant Update requires the following for the shipping rates to be retrieved:</p>
 
@@ -24,11 +24,11 @@
   <li>Your store installation must be configured for and have SSL enabled.</li>
 </ul>
 
-<h3 class="notoc">PayPal Account Optional</h3>
+<h5 class="notoc">PayPal Account Optional</h5>
 
 <p>PayPal Account Optional allows customers without a local or PayPal account to proceed through the Express Checkout flow as a guest. Customers do not need to create a PayPal account during the Express Checkout flow and their shipping and billing information is passed back to the store to use for the order.</p>
 
-<h2 class="notoc">Configuration Settings</h2>
+<h4 class="notoc">Configuration Settings</h4>
 
 <table class="table table-striped table-hover">
   <thead>
@@ -43,6 +43,26 @@
       <td>Status</td>
       <td>Set this to <em>Live</em> to use this module with the Live API Credentials, or to <em>Sandbox</em> for the Sandbox API Credentials. <em>Disabled</em> disables the module as a payment method.</td>
       <td><em>Live</em></td>
+    </tr>
+    <tr>
+      <td>Checkout Flow</td>
+      <td>Use the new pop-up In-Context checkout flow and have PayPal automatically choose the best checkout flow to use, or use standard full-page Classic checkout flow. In-Context does not yet support all of the features of the Classic checkout flow such as <i>Instant Update</i>.</td>
+      <td><em>In-Context</em></td>
+    </tr>
+    <tr>
+      <td>Checkout Button Color</td>
+      <td>Choose the color of the Checkout with PayPal button.</td>
+      <td><em>Gold</em></td>
+    </tr>
+    <tr>
+      <td>Checkout Button Size</td>
+      <td>Choose the size of the Checkout with PayPal button.</td>
+      <td><em>Small</em></td>
+    </tr>
+    <tr>
+      <td>Checkout Button Shape</td>
+      <td>Choose the shape of the Checkout with PayPal button.</td>
+      <td><em>Pill</em></td>
     </tr>
     <tr>
       <td>PayPal Account Optional</td>
@@ -86,9 +106,9 @@
   </tbody>
 </table>
 
-<h2 class="notoc">Notes</h2>
+<h4 class="notoc">Notes</h4>
 
-<h3 class="notoc">Customer Accounts</h3>
+<h5 class="notoc">Customer Accounts</h5>
 
 <p>PayPal Express Checkout allows guest purchases to be made without the customer needing to create or log into their local store account. A local customer account is however created when they return back to the store from the Express Checkout flow to keep track of the order.</p>
 
@@ -96,10 +116,10 @@
 
 <p>If the Set Password account content module is installed, the password is left empty and no e-mail is sent to the customer. The customer then has the opportunity to set their own password in the My Account page during their session or they will only able to log in again through Log In with PayPal or PayPal Express Checkout when their next order is made.</p>
 
-<h3 class="notoc">Order Processing</h3>
+<h5 class="notoc">Order Processing</h5>
 
 <p>The Express Checkout module has been developed to have the customer return back to the store to finalize their order on the checkout confirmation page. This allows the correct order totals and taxes to be shown for confirmation and for additional checks to be added before the order is processed (eg, agree to terms checkbox).</p>
 
-<h3 class="notoc">Line Items</h3>
+<h5 class="notoc">Line Items</h5>
 
 <p>Each product that is ordered is passed on to PayPal as line items to show to the customer during the Express Checkout flow. This includes extra third-party Order Total modules that manipulate the order total values (eg, discounts). In rare occassions, when the line items, shipping, and tax calculations do not match the order total value, only the order total value is passed onto PayPal without the line items.</p>

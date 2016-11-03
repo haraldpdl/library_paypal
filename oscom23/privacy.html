@@ -1,6 +1,6 @@
-<h1 class="notoc">Privacy Policy</h1>
+<h3 class="notoc">Privacy Policy</h3>
 
-<h2 class="notoc">API Credentials <small>(available for US, UK countries only)</small></h2>
+<h4 class="notoc">API Credentials</h4>
 
 <p>The PayPal App for osCommerce Online Merchant allows store owners to automatically setup and configure the App with their PayPal API credentials without the need to enter them manually. This is performed securely by granting osCommerce access to retrieve the API credentials from the store owners PayPal account.</p>
 
@@ -10,12 +10,13 @@
   <li>API Username</li>
   <li>API Password</li>
   <li>API Signature</li>
-  <li>Account ID</li>
+  <li>Merchant Account ID</li>
+  <li>PayPal E-Mail Address</li>
 </ul>
 
 <p>No other account information is accessed (eg, PayPal account username or password, account balance, transaction history, etc.).</p>
 
-<p>The API Username, API Password, API Signature, and Account ID information are used to automatically configure the PayPal modules bundled in the PayPal App, including:</p>
+<p>The API Username, API Password, API Signature, and Merchant Account ID information are used to automatically configure the PayPal modules bundled in the PayPal App, including:</p>
 
 <ul>
   <li>PayPal Payments Standard</li>
@@ -25,10 +26,10 @@
   <li>Log In with PayPal</li>
 </ul>
 
-<p>The process is started by using the "Retrieve Live Credentials" and "Retrieve Sandbox Credentials" buttons displayed on the PayPal App start and credentials management pages. The store owner is securely taken to PayPal's website where they are asked to grant osCommerce access to retrieve the API credentials, and are then redirected back to their online store to continue configuration of the PayPal App. This is performed with the following steps:</p>
+<p>The process is started by using the <span class="label label-info">Retrieve Live Credentials</span> and <span class="label label-info">Retrieve Sandbox Credentials</span> buttons displayed on the PayPal App start and credentials management pages. The store owner is securely taken to PayPal's website where they are asked to grant osCommerce access to retrieve the API credentials, and are then redirected back to their online store to continue configuration of the PayPal App. This is performed with the following steps:</p>
 
 <ol>
-  <li>The store owner clicks on "Retrieve Live Credentials" or "Retrieve Sandbox Credentials" and is securely taken to an initialization page on the osCommerce website that registers the request and immediately redirects the store owner to an on-boarding page on the PayPal website. osCommerce registers the following information in the request:
+  <li>The store owner clicks on <span class="label label-info">Retrieve Live Credentials</span> or <span class="label label-info">Retrieve Sandbox Credentials</span> and is securely taken to an initialization page on the osCommerce website that registers the request and immediately redirects the store owner to an on-boarding page on the PayPal website. osCommerce registers the following information in the request:
     <ul>
       <li>A uniquely generated session ID.</li>
       <li>A secret ID to match against the session ID.</li>
@@ -44,7 +45,7 @@
       <li>API Username</li>
       <li>API Password</li>
       <li>API Signature</li>
-      <li>Account ID</li>
+      <li>Merchant Account ID</li>
     </ul>
   </li>
   <li>The store owner is automatically redirected back to their PayPal App.</li>
@@ -61,7 +62,7 @@
   osCommerce has worked closely with PayPal to ensure the PayPal App follows strict privacy and security policies.
 </div>
 
-<h2 class="notoc">PayPal Modules</h2>
+<h4 class="notoc">PayPal Modules</h4>
 
 <p>PayPal modules send store owner, online store, and customer related information to PayPal to process API transactions. These include the following modules:</p>
 
@@ -89,12 +90,12 @@
   The parameters of each transaction sent to and recieved from PayPal can be inspected on the PayPal App Log page.
 </div>
 
-<h2 class="notoc">App Updates</h2>
+<h4 class="notoc">App Updates</h4>
 
 <p>The PayPal App for osCommerce Online Merchant automatically checks the osCommerce website for updates that are available to the App. This check is performed once every 24 hours and if an update is available, a notification is shown to allow the App to download and apply the update.</p>
 
-<p>A manual check for available updates is also performed on the PayPal App Info page.</p>
+<p>A manual check for available updates is also performed on the PayPal App <span class="label label-default">Info/Help</span> page.</p>
 
-<h2 class="notoc">Google Hosted Libraries (jQuery and jQuery UI)</h2>
+<h4 class="notoc">Google Hosted Libraries (jQuery and jQuery UI)</h4>
 
 <p>If jQuery or jQuery UI are not already loaded in the Administration Tool, the PayPal App administration pages automatically load the libraries securely through Google Hosted Libraries.</p>
