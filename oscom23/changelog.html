@@ -3,6 +3,16 @@
 <h4>PayPal App</h4>
 
 <dl class="bulleted">
+  <dt>v5.010 01-Mar-2017</dt>
+  <dd>Add new general App parameter to test and use the default server configured SSL version when performing API requests to PayPals servers or force TLS v1.2 connections. (TLS v1.2 connections are required from June 30, 2017)</dd>
+  <dd>Use the customer address suburb value as the street2 parameter value for Payments Standard, Express Checkout, Direct Payment, and Hosted Solution.</dd>
+  <dd>Payments Standard: If "receiver_email" is not returned back to the store, fallback to "business" to verify the transaction with.</dd>
+  <dd>Payments Standard: Disable the module if the App API Credentials or module PDT configuration parameters have not been entered. Either is now required to be able to verify the transaction when the customer returns back to the store after payment is made.</dd>
+  <dd>Payments Standard: Strip extra slashes that were being logged.</dd>
+  <dd>Payments Standard: Remove deprecated NO_NOTE and PAGE_STYLE parameters. (deprecated Sept. 2016)</dd>
+  <dd>Express Checkout: Remove deprecated ALLOWNOTE and PAGESTYLE parameters. (deprecated Sept. 2016)</dd>
+  <dd>Update osCommerce links from http to https.</dd>
+
   <dt>v5.001 19-Feb-2017</dt>
   <dd>Fix getIdentifier() usage in the PayPal Payments Standard module.</dd>
 
