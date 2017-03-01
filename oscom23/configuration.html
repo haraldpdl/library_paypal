@@ -2,7 +2,7 @@
 
 <p>Global configuration parameters affect all App modules and can be configured on the <span class="label label-default">Configure</span> page using the <span class="label label-info">General</span> button.</p>
 
-{image}app-configure-01.png|Managing the PayPal account API Credentials{image}
+{image}app-configure-01.png|Configuring the global App configuration parameters{image}
 
 <dl>
   <dt>Gateway</dt>
@@ -27,6 +27,10 @@
     </ul>
   </dd>
   <dd>If connections to PayPal's servers cannot be made, disabling this setting may help however it is recommended to find a solution that allows this settings to remain enabled.</dd>
+
+  <dt>SSL Version</dt>
+  <dd>Use the default cURL configured SSL version connection setting when making API calls to PayPal or force TLS v1.2 connections.</dd>
+  <dd>A connection test can be performed using the <span class="label label-warning">Test Connection</span> button to open a dialog window showing the results of the default configured SSL version and forced TLS v1.2 connections.</dd>
 
   <dt>Proxy</dt>
   <dd>Some hosting providers require a proxy to be used for cURL connections to be made.</dd>

@@ -1,0 +1,17 @@
+<h3 class="notoc">TLS v1.2 Connections <small>cURL SSL Version</small></h3>
+
+<p>The Payment Card Industry Security Standards Council (PCI SSC) has mandated that from June 30, 2018 secure communication channels between two systems must be performed with a secure version of the Transport Layer Security (TLS) cryptographic protocol (currently v1.1 or higher). As a leader in Financial Technology, PayPal has elected to move forward with upgrading their systems prior to the PCI Council recommended date and are requiring all merchant API communications with PayPal to be performed with <strong>TLS v1.2</strong> from <strong>June 30, 2017</strong>, discontinuing support for TLS v1.0 and v1.1.</p>
+
+<p>Checking to see if the PayPal App can perform TLS v1.2 connections on your web server can be performed on the <span class="label label-default">Configure</span> &rarr; <span class="label label-info">General</span> page using the <span class="label label-warning">Test Connection</span> button shown in the SSL Version parameter configuration. This opens a dialog window showing the result of the connection test using the default SSL version configured with PHP/cURL and with a forced connection using TLS v1.2.</p>
+
+{image}app-ssl_version-01.png|The Test Connection dialog showing successful connections for the default PHP/cURL configuration and forced TLS v1.2 connections{image}
+
+<p>If the default setting is successful, it is generally safe to leave the SSL Version configuration parameter set to <i>Default</i>. This ensures that a connection to PayPal can be performed using at least TLS v1.2 or higher cryptographic protocol version.</p>
+
+{image}app-ssl_version-02.png|The Test Connection dialog showing a failed connection test using the default PHP/cURL configuration{image}
+
+<p>If a connection using the default PHP/cURL configuration fails, setting the SSL Version configuration parameter to <i>TLS v1.2</i> is required if the test connection using TLS v1.2 is successful. This overrides the default configuration of PHP/cURL on your web server and ensures that a connection to PayPal can be performed using the TLS v1.2 cryptographic protocol version.</p>
+
+{image}app-ssl_version-03.png|The Test Connection dialog showing a failed connection test using the default PHP/cURL configuration and a forced TLS v1.2 connection{image}
+
+<p>If both test connections fail, please consult with your hosting provider to upgrade the cURL version that is installed with your PHP web server to support TLS v1.2 connections. If this is not performed by June 30, 2017, connections to PayPal will fail and orders will no longer be able to be processed using PayPal as a payment method.</p>
