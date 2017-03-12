@@ -108,6 +108,67 @@
   </tbody>
 </table>
 
+<h4 class="notoc">Checkout Button Styling</h4>
+
+<p>The following CSS stylesheet definitions are available to help with the styling and positioning of the "Check out with PayPal" button shown on the shopping cart page:</p>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Gateway</th>
+      <th>Checkout Flow</th>
+      <th>ID</th>
+      <th>Description</th>
+      <th>Default CSS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>PayPal</strong></td>
+      <td>In-Context</td>
+      <td>ppECButton</td>
+      <td>The block where the checkout button is inserted via the PayPal javascript loaded for the In-Context checkout flow.</td>
+      <td>{code}display: inline-block;{code}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Classic</td>
+      <td>ppECButtonClassicLink</td>
+      <td>The href link tag containing the link to initiate the Express Checkout flow with.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>ppECButtonClassic</td>
+      <td>The image tag displaying the "Check out with PayPal" button image.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>Payflow</strong></td>
+      <td><i>n/a</i></td>
+      <td>ppECButtonPfLink</td>
+      <td>The href link tag containing the link to initiate the Express Checkout flow with.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>ppECButtonPf</td>
+      <td>The image tag displaying the "Check out with PayPal" button image.</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Stylesheet definitions can be defined in the following file:</p>
+
+{code}
+ext/modules/payment/paypal/express.css
+{code}
+
+<p><i>The stylesheet definition file will only be loaded if it exists and will never be updated via the PayPal App Online Update routine.</i></p>
+
 <h4 class="notoc">Notes</h4>
 
 <h5 class="notoc">Customer Accounts</h5>
